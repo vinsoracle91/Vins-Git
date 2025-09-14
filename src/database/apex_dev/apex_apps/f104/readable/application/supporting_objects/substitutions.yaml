@@ -1,0 +1,41 @@
+---
+- # ====== Substitution: APP_NAME ==============================
+  id: 1
+  identification: 
+    name: APP_NAME
+
+  installation: 
+    prompt-substitution: false
+
+- # ====== Substitution: JET_VISUALIZATION_URL =================
+  id: 2
+  identification: 
+    name: JET_VISUALIZATION_URL
+
+  installation: 
+    prompt-substitution: false
+
+- # ====== Substitution: MOVIEDB_API ===========================
+  id: 3
+  identification: 
+    name: MOVIEDB_API
+
+  installation: 
+    prompt-substitution: false
+
+- # ====== Substitution: GOOGLE_API ============================
+  id: 4
+  identification: 
+    name: GOOGLE_API
+
+  installation: 
+    prompt-substitution: false
+
+- # ====== Substitution: PRODUCT_NAME ==========================
+  id: 5
+  identification: 
+    name: PRODUCT_NAME
+
+  installation: 
+    prompt-substitution: false
+

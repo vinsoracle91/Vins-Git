@@ -1,0 +1,3619 @@
+---
+- # ====== List: New in 20.2 ===================================
+  id: 192670564383222757
+  identification: 
+    name: New in 20.2
+
+  subscription: 
+    version-number: 1089078564
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Pareto Chart, pg 20 ==========================
+    id: 192670725013222758
+    label: 
+      label: Pareto Chart, pg 20
+
+    icon: 
+      image/icon-css-classes: fa-combo-chart
+
+    layout: 
+      sequence: 10
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:20:&SESSION.::&DEBUG.::::'
+        page: 20 # Pareto Chart
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Pareto Chart, based on a declaratively defined Combination Chart, with a Bar series and a Line series, where individual values are represented in descending order by bars, and the cumulative total is represented by the line.
+
+- # ====== List: Stack Grouping ================================
+  id: 192683867456386810
+  identification: 
+    name: Stack Grouping
+
+  subscription: 
+    version-number: 1089078564
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Bar Chart (Stack Label & Stack Category) - Pag
+    id: 192684055109386810
+    label: 
+      label: Bar Chart (Stack Label & Stack Category) - Page 9
+
+    icon: 
+      image/icon-css-classes: fa-dial-gauge-chart
+
+    layout: 
+      sequence: 10
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:9:&SESSION.::&DEBUG.::::'
+        page: 9 # Bar
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates the new Stack Category and Stack Label attributes on a Bar chart, to render multiple stacks on a given chart and display the stack total value as a label above each stack.
+
+- # ====== List: Declarative Font Formatting ===================
+  id: 192717882398624991
+  identification: 
+    name: Declarative Font Formatting
+
+  subscription: 
+    version-number: 1089078564
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Line Chart ( Declarative Font Formatting ) - P
+    id: 192718072553624992
+    label: 
+      label: Line Chart ( Declarative Font Formatting ) - Page 15
+
+    icon: 
+      image/icon-css-classes: fa-text-height
+
+    layout: 
+      sequence: 10
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:15:&SESSION.::&DEBUG.::::'
+        page: 15 # Line
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates the new axes, legend, and value declarative font formatting attributes, to style the text rendered on a chart.
+
+  - # ====== Entry: Combination Chart  Information (Y-Axis Value F
+    id: 192721261051669622
+    label: 
+      label: Combination Chart  Information (Y-Axis Value Formatting) - Page 25
+
+    icon: 
+      image/icon-css-classes: fa-combo-chart
+
+    layout: 
+      sequence: 20
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:25:&SESSION.::&DEBUG.::::'
+        page: 25 # Combination
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates the styling of the y-axis title
+
+  - # ====== Entry: Bar Chart (Dual Y Axis with formatted Labels) 
+    id: 192723116196739275
+    label: 
+      label: Bar Chart (Dual Y Axis with formatted Labels) - Page 9
+
+    icon: 
+      image/icon-css-classes: fa-bar-chart
+
+    layout: 
+      sequence: 30
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:9:&SESSION.::&DEBUG.::::'
+        page: 9 # Bar
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates the styling of the series-level labels
+
+- # ====== List: Chart Links ===================================
+  id: 404930169218867445
+  identification: 
+    name: Chart Links
+
+  subscription: 
+    version-number: 1089078564
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Linking to Interactive Grid - Bar Chart (Serie
+    id: 404930356832867450
+    label: 
+      label: Linking to Interactive Grid - Bar Chart (Series Name Column Mapping), pg 9
+
+    icon: 
+      image/icon-css-classes: fa-link
+
+    layout: 
+      sequence: 10
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:9:&SESSION.::&DEBUG.::::'
+        page: 9 # Bar
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates linking from a chart to an Interactive Grid, using the Interactive Grid URL Filtering support introduced in APEX 20.1.
+
+  - # ====== Entry: Linking to Interactive Grid - Pie, pg 4 ======
+    id: 404931236027887304
+    label: 
+      label: Linking to Interactive Grid - Pie, pg 4
+
+    icon: 
+      image/icon-css-classes: fa-link
+
+    layout: 
+      sequence: 20
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:4:&SESSION.::&DEBUG.::::'
+        page: 4 # Pie
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates linking from a chart to an Interactive Grid, using the Interactive Grid URL Filtering support introduced in APEX 20.1.
+
+  - # ====== Entry: Master Detail Chart Links - Page 4 ===========
+    id: 404932002129894109
+    label: 
+      label: Master Detail Chart Links - Page 4
+
+    icon: 
+      image/icon-css-classes: fa-link
+
+    layout: 
+      sequence: 30
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:4:&SESSION.::&DEBUG.::::'
+        page: 4 # Pie
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates linking from one chart to another chart, using the chart Link attribute.
+
+- # ====== List: Sorting =======================================
+  id: 556939928194927880
+  identification: 
+    name: Sorting
+
+  subscription: 
+    version-number: 1089078564
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Bar Chart (Series Colors) - Page 9 ===========
+    id: 556940092914927882
+    label: 
+      label: Bar Chart (Series Colors) - Page 9
+
+    icon: 
+      image/icon-css-classes: fa-area-chart
+
+    layout: 
+      sequence: 10
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:9:&SESSION.::&DEBUG.::::'
+        page: 9 # Bar
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: Four Bar charts demonstrate the various methods of defining colors on a chart, and each of the charts demonstrates a different style of sorting.
+
+  - # ====== Entry: Area Chart (Stacked) - Page 2 ================
+    id: 556940521435927883
+    label: 
+      label: Area Chart (Stacked) - Page 2
+
+    icon: 
+      image/icon-css-classes: fa-line-chart
+
+    layout: 
+      sequence: 15
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:18:&SESSION.::&DEBUG.::::'
+        page: 18 # Line with Area
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates sorting the chart by the x-axis labels, descending.
+
+  - # ====== Entry: Donut Chart (Sorting) - Page 9 ===============
+    id: 556941842565950243
+    label: 
+      label: Donut Chart (Sorting) - Page 9
+
+    layout: 
+      sequence: 25
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:9:&SESSION.::&DEBUG.::::'
+        page: 9 # Bar
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates sorting the chart by the values, ascending.
+
+- # ====== List: Styling Tooltip Labels ========================
+  id: 1008223465487282417
+  identification: 
+    name: Styling Tooltip Labels
+
+  subscription: 
+    version-number: 1089078564
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Line with Area Chart ( Custom Tooltip Labels )
+    id: 1008223657952282422
+    label: 
+      label: Line with Area Chart ( Custom Tooltip Labels ) - Page 18
+
+    icon: 
+      image/icon-css-classes: fa-line-area-chart
+
+    layout: 
+      sequence: 15
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:18:&SESSION.::&DEBUG.::::'
+        page: 18 # Line with Area
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Line with Area chart, rendering customised tooltip labels using JavaScript, via the JavaScript Initialization Code attribute
+
+  - # ====== Entry: Area Chart (Legend JavaScript Code Customizati
+    id: 1008224985535315434
+    label: 
+      label: Area Chart (Legend JavaScript Code Customization) - Page 2
+
+    icon: 
+      image/icon-css-classes: fa-area-chart
+
+    layout: 
+      sequence: 25
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:2:&SESSION.::&DEBUG.::::'
+        page: 2 # Area
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates an Area chart, rendering a customised tooltip on the Acme series of the multi-series chart, via the SQL query and use of the declarative Custom Tooltip attribute
+
+- # ====== List: Navigation Menu ===============================
+  id: 1536810865088135326
+  identification: 
+    name: Navigation Menu
+
+  subscription: 
+    version-number: 1089078564
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Event Drops ==================================
+    id: 270168846038467596
+    label: 
+      label: Event Drops
+
+    icon: 
+      image/icon-css-classes: fa-scatter-chart
+
+    layout: 
+      sequence: 35
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 46
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:46:&SESSION.::&DEBUG.::::'
+        page: 46 # Event Drops
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Box Plot =====================================
+    id: 297597143988272402
+    label: 
+      label: Box Plot
+
+    icon: 
+      image/icon-css-classes: fa-box-plot-chart
+
+    layout: 
+      sequence: 17
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 41
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:41:&SESSION.::&DEBUG.::::'
+        page: 41 # Box Plot
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Pyramid ======================================
+    id: 298004104796365700
+    label: 
+      label: Pyramid
+
+    icon: 
+      image/icon-css-classes: fa-pyramid-chart
+
+    layout: 
+      sequence: 77
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:43:&SESSION.::&DEBUG.::::'
+        page: 43 # Pyramid
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Pareto Chart =================================
+    id: 338851592215885987
+    label: 
+      label: Pareto Chart
+
+    icon: 
+      image/icon-css-classes: fa-combo-chart
+
+    layout: 
+      sequence: 65
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 20
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:20:&SESSION.::&DEBUG.::::'
+        page: 20 # Pareto Chart
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Data Densification ===========================
+    id: 369315679621354458
+    label: 
+      label: Data Densification
+
+    icon: 
+      image/icon-css-classes: fa-code-group
+
+    layout: 
+      sequence: 27
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 14
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:14:&SESSION.::&DEBUG.::::'
+        page: 14 # Data Densification
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Stock ========================================
+    id: 435023266876436363
+    label: 
+      label: Stock
+
+    icon: 
+      image/icon-css-classes: fa-stock-chart
+
+    layout: 
+      sequence: 95
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 7
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:7:&SESSION.::&DEBUG.::::'
+        page: 7 # Stock
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Area =========================================
+    id: 444907080484921708
+    label: 
+      label: Area
+
+    icon: 
+      image/icon-css-classes: fa-area-chart
+
+    layout: 
+      sequence: 10
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 2
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:2:&SESSION.::&DEBUG.::::'
+        page: 2 # Area
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Line with Area ===============================
+    id: 445095061728154144
+    label: 
+      label: Line with Area
+
+    icon: 
+      image/icon-css-classes: fa-line-area-chart
+
+    layout: 
+      sequence: 60
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 18
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:18:&SESSION.::&DEBUG.::::'
+        page: 18 # Line with Area
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Combination ==================================
+    id: 449256179275710877
+    label: 
+      label: Combination
+
+    icon: 
+      image/icon-css-classes: fa-combo-chart
+
+    layout: 
+      sequence: 25
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 25
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:25:&SESSION.::&DEBUG.::::'
+        page: 25 # Combination
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Polar ========================================
+    id: 515812770685805731
+    label: 
+      label: Polar
+
+    icon: 
+      image/icon-css-classes: fa-polar-chart
+
+    layout: 
+      sequence: 75
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 19
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:19:&SESSION.::&DEBUG.::::'
+        page: 19 # Polar
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Radar ========================================
+    id: 515850456885384838
+    label: 
+      label: Radar
+
+    icon: 
+      image/icon-css-classes: fa-radar-chart
+
+    layout: 
+      sequence: 80
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 21
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:21:&SESSION.::&DEBUG.::::'
+        page: 21 # Radar
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Funnel =======================================
+    id: 555315229490272354
+    label: 
+      label: Funnel
+
+    icon: 
+      image/icon-css-classes: fa-funnel-chart
+
+    layout: 
+      sequence: 40
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 22
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:22:&SESSION.::&DEBUG.::::'
+        page: 22 # Funnel
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Scatter ======================================
+    id: 580737065845153823
+    label: 
+      label: Scatter
+
+    icon: 
+      image/icon-css-classes: fa-scatter-chart
+
+    layout: 
+      sequence: 90
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:8:&SESSION.::&DEBUG.::::'
+        page: 8 # Scatter
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Range ========================================
+    id: 628070658944454162
+    label: 
+      label: Range
+
+    icon: 
+      image/icon-css-classes: fa-range-chart-bar
+
+    layout: 
+      sequence: 85
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 23
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:23:&SESSION.::&DEBUG.::::'
+        page: 23 # Range
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Manage Sample Data ===========================
+    id: 731632793437950664
+    label: 
+      label: Manage Sample Data
+
+    layout: 
+      sequence: 115
+      parent-entry: Administration # 2372951737851415443
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:27:&SESSION.::&DEBUG.::::'
+        page: 27 # Manage Sample Data
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Dashboard - Pies =============================
+    id: 900206636663855823
+    label: 
+      label: Dashboard - Pies
+
+    icon: 
+      image/icon-css-classes: fa-columns
+
+    layout: 
+      sequence: 32
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 24
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:24:&SESSION.::&DEBUG.::::'
+        page: 24 # Dashboard - Pies
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Home =========================================
+    id: 1536810979188135333
+    label: 
+      label: Home
+
+    icon: 
+      image/icon-css-classes: fa-home
+
+    layout: 
+      sequence: 5
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 1
+      - 12
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:1:&SESSION.::&DEBUG.::::'
+        page: 1 # Sample Charts
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Bar ==========================================
+    id: 1536811053973135335
+    label: 
+      label: Bar
+
+    icon: 
+      image/icon-css-classes: fa-bar-chart
+
+    layout: 
+      sequence: 15
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 9
+      - 29
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:9:&SESSION.::&DEBUG.::::'
+        page: 9 # Bar
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Gantt ========================================
+    id: 1536811326555135335
+    label: 
+      label: Gantt
+
+    icon: 
+      image/icon-css-classes: fa-gantt-chart
+
+    layout: 
+      sequence: 50
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:3:&SESSION.::&DEBUG.:3:::'
+        page: 3 # Gantt
+        clear-cache: 3
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Dashboard ====================================
+    id: 1536811412880135335
+    label: 
+      label: Dashboard
+
+    icon: 
+      image/icon-css-classes: fa-list-alt
+
+    layout: 
+      sequence: 30
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:6:&SESSION.::&DEBUG.::::'
+        page: 6 # Dashboard
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Line =========================================
+    id: 1536811540620135335
+    label: 
+      label: Line
+
+    icon: 
+      image/icon-css-classes: fa-line-chart
+
+    layout: 
+      sequence: 55
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:15:&SESSION.::&DEBUG.::::'
+        page: 15 # Line
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Pie ==========================================
+    id: 1536811758388135335
+    label: 
+      label: Pie
+
+    icon: 
+      image/icon-css-classes: fa-pie-chart
+
+    layout: 
+      sequence: 70
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 4
+      - 13
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:4:&SESSION.::&DEBUG.::::'
+        page: 4 # Pie
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Status Meter Gauge ===========================
+    id: 1536811815766135335
+    label: 
+      label: Status Meter Gauge
+
+    icon: 
+      image/icon-css-classes: fa-dial-gauge-chart
+
+    layout: 
+      sequence: 92
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:5:&SESSION.::&DEBUG.::::'
+        page: 5 # Status Meter Gauge
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Bubble =======================================
+    id: 1636457159719770666
+    label: 
+      label: Bubble
+
+    icon: 
+      image/icon-css-classes: fa-bubble-chart
+
+    layout: 
+      sequence: 20
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 11
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:11:&SESSION.::&DEBUG.::::'
+        page: 11 # Bubble
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Theme Styles =================================
+    id: 2142639976164855504
+    label: 
+      label: Theme Styles
+
+    layout: 
+      sequence: 120
+      parent-entry: Administration # 2372951737851415443
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:10:&SESSION.::&DEBUG.::::'
+        page: 10 # Application Theme Style
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Administration ===============================
+    id: 2372951737851415443
+    label: 
+      label: Administration
+
+    icon: 
+      image/icon-css-classes: fa-gear
+
+    layout: 
+      sequence: 110
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:17:&SESSION.::&DEBUG.::::'
+        page: 17 # Administration
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Legend Plug-in ===============================
+    id: 3667742908472279281
+    label: 
+      label: Legend Plug-in
+
+    icon: 
+      image/icon-css-classes: fa-plug
+
+    layout: 
+      sequence: 52
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 26
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:26:&SESSION.::&DEBUG.::::'
+        page: 26 # Oracle JET ojLegend Plug-in
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Reference ====================================
+    id: 3667772204084018622
+    label: 
+      label: Reference
+
+    icon: 
+      image/icon-css-classes: fa-book
+
+    layout: 
+      sequence: 130
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 28
+      - 31
+      - 32
+      - 33
+      - 34
+      - 35
+      - 36
+      - 37
+      - 38
+      - 40
+      - 16
+      - 49
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:28:&SESSION.::&DEBUG.::::'
+        page: 28 # Reference
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+- # ====== List: Navigation Bar (Top) ==========================
+  id: 1728689706387393742
+  identification: 
+    name: Navigation Bar (Top)
+
+  subscription: 
+    version-number: 1089078564
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Help =========================================
+    id: 1728689909081393746
+    label: 
+      label: Help
+
+    icon: 
+      image/icon-css-classes: fa-question-circle-o
+
+    layout: 
+      sequence: 20
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:HELP:&SESSION.::&DEBUG.::::'
+        page: HELP
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: &APP_USER. ===================================
+    id: 1728690304571393754
+    label: 
+      label: '&APP_USER.'
+
+    icon: 
+      image/icon-css-classes: fa-user
+
+    layout: 
+      sequence: 30
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: '#'
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      2.: has-username
+
+  - # ====== Entry: Sign Out =====================================
+    id: 1728690689799393754
+    label: 
+      label: Sign Out
+
+    layout: 
+      sequence: 50
+      parent-entry: '&APP_USER.' # 1728690304571393754
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: '&LOGOUT_URL.'
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+- # ====== List: Administration ================================
+  id: 2372946899294389249
+  identification: 
+    name: Administration
+
+  subscription: 
+    version-number: 1089078564
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Manage Sample Data ===========================
+    id: 731630786847935483
+    label: 
+      label: Manage Sample Data
+
+    icon: 
+      image/icon-css-classes: fa-edit
+
+    layout: 
+      sequence: 10
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:27:&SESSION.::&DEBUG.::::'
+        page: 27 # Manage Sample Data
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This application ships with sample data.  You can remove or recreate sample data using this administrative page.
+
+  - # ====== Entry: Theme Styles =================================
+    id: 2372947153506389252
+    label: 
+      label: Theme Styles
+
+    icon: 
+      image/icon-css-classes: fa-desktop
+
+    layout: 
+      sequence: 20
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:10:&SESSION.::&DEBUG.:RP:::'
+        page: 10 # Application Theme Style
+        clear-cache: RP
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: Change user interface theme style for all users.
+
+- # ====== List: Charts ========================================
+  id: 2584195026351242798
+  identification: 
+    name: Charts
+
+  subscription: 
+    version-number: 1089078564
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Box Plot =====================================
+    id: 297919675537939389
+    label: 
+      label: Box Plot
+
+    icon: 
+      image/icon-css-classes: fa-box-plot-chart
+
+    layout: 
+      sequence: 13
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:41:&SESSION.::&DEBUG.::::'
+        page: 41 # Box Plot
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Pyramid ======================================
+    id: 298004475857369563
+    label: 
+      label: Pyramid
+
+    icon: 
+      image/icon-css-classes: fa-pyramid-chart
+
+    layout: 
+      sequence: 67
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:43:&SESSION.::&DEBUG.::::'
+        page: 43 # Pyramid
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Event Drops ==================================
+    id: 338878503973500992
+    label: 
+      label: Event Drops
+
+    icon: 
+      image/icon-css-classes: fa-scatter-chart
+
+    layout: 
+      sequence: 30
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:46:&SESSION.::&DEBUG.::::'
+        page: 46 # Event Drops
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Data Densification ===========================
+    id: 369390108081776512
+    label: 
+      label: Data Densification
+
+    icon: 
+      image/icon-css-classes: fa-code-group
+
+    layout: 
+      sequence: 21
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:14:&SESSION.::&DEBUG.::::'
+        page: 14 # Data Densification
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Gantt ========================================
+    id: 444905938553883892
+    label: 
+      label: Gantt
+
+    icon: 
+      image/icon-css-classes: fa-gantt-chart
+
+    layout: 
+      sequence: 40
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:3:&SESSION.::&DEBUG.::::'
+        page: 3 # Gantt
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Area =========================================
+    id: 445070917674852179
+    label: 
+      label: Area
+
+    icon: 
+      image/icon-css-classes: fa-area-chart
+
+    layout: 
+      sequence: 5
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:2:&SESSION.::&DEBUG.::::'
+        page: 2 # Area
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Line with Area ===============================
+    id: 445113834752327083
+    label: 
+      label: Line with Area
+
+    icon: 
+      image/icon-css-classes: fa-line-area-chart
+
+    layout: 
+      sequence: 50
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:18:&SESSION.::&DEBUG.::::'
+        page: 18 # Line with Area
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Combination ==================================
+    id: 449365406682038003
+    label: 
+      label: Combination
+
+    icon: 
+      image/icon-css-classes: fa-combo-chart
+
+    layout: 
+      sequence: 20
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:25:&SESSION.::&DEBUG.::::'
+        page: 25 # Combination
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Polar ========================================
+    id: 515865928071485397
+    label: 
+      label: Polar
+
+    icon: 
+      image/icon-css-classes: fa-polar-chart
+
+    layout: 
+      sequence: 65
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:19:&SESSION.::&DEBUG.::::'
+        page: 19 # Polar
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Radar ========================================
+    id: 515866307190487689
+    label: 
+      label: Radar
+
+    icon: 
+      image/icon-css-classes: fa-radar-chart
+
+    layout: 
+      sequence: 70
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:21:&SESSION.::&DEBUG.::::'
+        page: 21 # Radar
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Funnel =======================================
+    id: 555317183469289401
+    label: 
+      label: Funnel
+
+    icon: 
+      image/icon-css-classes: fa-funnel-chart
+
+    layout: 
+      sequence: 35
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:22:&SESSION.::&DEBUG.::::'
+        page: 22 # Funnel
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Scatter ======================================
+    id: 580737573326159595
+    label: 
+      label: Scatter
+
+    icon: 
+      image/icon-css-classes: fa-scatter-chart
+
+    layout: 
+      sequence: 80
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:8:&SESSION.::&DEBUG.::::'
+        page: 8 # Scatter
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Range ========================================
+    id: 628357412724851293
+    label: 
+      label: Range
+
+    icon: 
+      image/icon-css-classes: fa-range-chart-bar
+
+    layout: 
+      sequence: 75
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:23:&SESSION.::&DEBUG.::::'
+        page: 23 # Range
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Dashboard - Pie Charts =======================
+    id: 900279250943099753
+    label: 
+      label: Dashboard - Pie Charts
+
+    icon: 
+      image/icon-css-classes: fa-columns
+
+    layout: 
+      sequence: 27
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:24:&SESSION.::&DEBUG.::::'
+        page: 24 # Dashboard - Pies
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Line =========================================
+    id: 1314127711515236033
+    label: 
+      label: Line
+
+    icon: 
+      image/icon-css-classes: fa-line-chart
+
+    layout: 
+      sequence: 45
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 15
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:15:&SESSION.::&DEBUG.:15:::'
+        page: 15 # Line
+        clear-cache: 15
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Bubble =======================================
+    id: 1636460937962819411
+    label: 
+      label: Bubble
+
+    icon: 
+      image/icon-css-classes: fa-bubble-chart
+
+    layout: 
+      sequence: 15
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:11:&SESSION.::&DEBUG.::::'
+        page: 11 # Bubble
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Pareto Chart =================================
+    id: 2127933547119281522
+    label: 
+      label: Pareto Chart
+
+    icon: 
+      image/icon-css-classes: fa-combo-chart
+
+    layout: 
+      sequence: 55
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:20:&SESSION.::&DEBUG.::::'
+        page: 20 # Pareto Chart
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Pie ==========================================
+    id: 2584195228959242798
+    label: 
+      label: Pie
+
+    icon: 
+      image/icon-css-classes: fa-pie-chart
+
+    layout: 
+      sequence: 60
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 4
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:4:&SESSION.::&DEBUG.::::'
+        page: 4 # Pie
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Bar ==========================================
+    id: 2584195527688242798
+    label: 
+      label: Bar
+
+    icon: 
+      image/icon-css-classes: fa-bar-chart
+
+    layout: 
+      sequence: 10
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 9
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:9:&SESSION.::&DEBUG.:9:::'
+        page: 9 # Bar
+        clear-cache: 9
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Stock ========================================
+    id: 2584195835399242798
+    label: 
+      label: Stock
+
+    icon: 
+      image/icon-css-classes: fa-stock-chart
+
+    layout: 
+      sequence: 85
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 3
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:7:&SESSION.::&DEBUG.::::'
+        page: 7 # Stock
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Dashboard ====================================
+    id: 2591215434006247968
+    label: 
+      label: Dashboard
+
+    icon: 
+      image/icon-css-classes: fa-list-alt
+
+    layout: 
+      sequence: 25
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:6:&SESSION.::&DEBUG.::::'
+        page: 6 # Dashboard
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Status Meter Gauge ===========================
+    id: 2592609425198434642
+    label: 
+      label: Status Meter Gauge
+
+    icon: 
+      image/icon-css-classes: fa-dial-gauge-chart
+
+    layout: 
+      sequence: 82
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:5:&SESSION.::&DEBUG.::::'
+        page: 5 # Status Meter Gauge
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Legend Plug-in ===============================
+    id: 3667764468463695384
+    label: 
+      label: Legend Plug-in
+
+    icon: 
+      image/icon-css-classes: fa-plug
+
+    layout: 
+      sequence: 42
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:26:&SESSION.::&DEBUG.::::'
+        page: 26 # Oracle JET ojLegend Plug-in
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Reference ====================================
+    id: 3668213249179641563
+    label: 
+      label: Reference
+
+    icon: 
+      image/icon-css-classes: fa-book
+
+    layout: 
+      sequence: 105
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:28:&SESSION.::&DEBUG.::::'
+        page: 28 # Reference
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+- # ====== List: Reference - JS ================================
+  id: 3667779652124038702
+  identification: 
+    name: Reference - JS
+
+  subscription: 
+    version-number: 1089078564
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Stack Grouping ===============================
+    id: 192683343760375728
+    label: 
+      label: Stack Grouping
+
+    icon: 
+      image/icon-css-classes: fa-line-area-chart
+
+    layout: 
+      sequence: 130
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:44:&SESSION.::&DEBUG.::::'
+        page: 44 # Stack Grouping
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: See a list of examples demonstrating the declarative grouping and labeling of stacked charts.
+
+  - # ====== Entry: Font Formatting ==============================
+    id: 192719242461639325
+    label: 
+      label: Font Formatting
+
+    icon: 
+      image/icon-css-classes: fa-text-height
+
+    layout: 
+      sequence: 120
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:45:&SESSION.::&DEBUG.::::'
+        page: 45 # Declarative Font Formatting
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: See a list of examples demonstrating the declarative styling of text rendered on a chart
+
+  - # ====== Entry: Style Chart Title ============================
+    id: 258053337769115094
+    label: 
+      label: Style Chart Title
+
+    icon: 
+      image/icon-css-classes: fa-font-size
+
+    layout: 
+      sequence: 150
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:24:&SESSION.::&DEBUG.::::'
+        page: 24 # Dashboard - Pies
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: See chart examples demonstrating the use of JavaScript Code to customize the chart title at initialization
+
+  - # ====== Entry: Chart Links ==================================
+    id: 404928006243847794
+    label: 
+      label: Chart Links
+
+    icon: 
+      image/icon-css-classes: fa-link
+
+    layout: 
+      sequence: 90
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:49:&SESSION.::&DEBUG.::::'
+        page: 49 # Chart Links
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: See a list of chart examples demonstrating how to link from chart to reports and charts
+
+  - # ====== Entry: Sorting ======================================
+    id: 556939432337915112
+    label: 
+      label: Sorting
+
+    icon: 
+      image/icon-css-classes: fa-sort-alpha-asc
+
+    layout: 
+      sequence: 12
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:42:&SESSION.::&DEBUG.::::'
+        page: 42 # Sorting
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: See a list of chart examples demonstrating how to sort chart values and labels, using the new <strong>Fill Gaps in Chart Data</strong> and <strong>Sort Order</strong> chart-level attributes.
+
+  - # ====== Entry: Customizing Tooltip Labels ===================
+    id: 1008221905721262523
+    label: 
+      label: Customizing Tooltip Labels
+
+    icon: 
+      image/icon-css-classes: fa-alert
+
+    layout: 
+      sequence: 50
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:48:&SESSION.::&DEBUG.::::'
+        page: 48 # Customizing Tooltip Labels
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: See a list of the chart examples demonstrating how to customise the labels displayed in a tooltip, both declaratively and via JavaScript customization
+
+  - # ====== Entry: JavaScript Code Customizations ===============
+    id: 3667779869076038704
+    label: 
+      label: JavaScript Code Customizations
+
+    icon: 
+      image/icon-css-classes: fa-code
+
+    layout: 
+      sequence: 10
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:30:&SESSION.::&DEBUG.::::'
+        page: 30 # JavaScript Code Customizations
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: See a list of the chart examples demonstrating the use of JavaScript Code to customize the chart at initialization
+
+  - # ====== Entry: Dynamic Actions ==============================
+    id: 3667780215792038708
+    label: 
+      label: Dynamic Actions
+
+    icon: 
+      image/icon-css-classes: fa-bolt
+
+    layout: 
+      sequence: 15
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:31:&SESSION.::&DEBUG.::::'
+        page: 31 # Dynamic Actions
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: See a list of the chart examples demonstrating the use of Dynamic Actions
+
+  - # ====== Entry: Y2 Axis ======================================
+    id: 3667780654916038708
+    label: 
+      label: Y2 Axis
+
+    icon: 
+      image/icon-css-classes: fa-y2-axis
+
+    layout: 
+      sequence: 40
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:33:&SESSION.::&DEBUG.::::'
+        page: 33 # Y2 Axis
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: See a list of the chart examples demonstrating the use of an extra, y2 axis
+
+  - # ====== Entry: Series Color =================================
+    id: 3667780974040038708
+    label: 
+      label: Series Color
+
+    icon: 
+      image/icon-css-classes: fa-paint-brush
+
+    layout: 
+      sequence: 100
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:32:&SESSION.::&DEBUG.::::'
+        page: 32 # Series Color
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: See a list of the chart examples demonstrating how to set the color of chart series
+
+  - # ====== Entry: JET Plug-in Component ========================
+    id: 3667782417565074976
+    label: 
+      label: JET Plug-in Component
+
+    icon: 
+      image/icon-css-classes: fa-plug
+
+    layout: 
+      sequence: 30
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:34:&SESSION.::&DEBUG.::::'
+        page: 34 # JET Plug-in Component
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: See a list of the chart examples demonstrating the use of an APEX plug-in, to incorporate other Oracle JET components in your application
+
+  - # ====== Entry: Datetime x-axis ==============================
+    id: 3667782886631081182
+    label: 
+      label: Datetime x-axis
+
+    icon: 
+      image/icon-css-classes: fa-calendar
+
+    layout: 
+      sequence: 20
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:35:&SESSION.::&DEBUG.::::'
+        page: 35 # Time Axis
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: See a list of the chart examples demonstrating the use of the Time Axis Type attribute, to render DATETIME information on the x-axis of a chart
+
+  - # ====== Entry: Zoom & Scroll ================================
+    id: 3667783476970092013
+    label: 
+      label: Zoom & Scroll
+
+    icon: 
+      image/icon-css-classes: fa-search-plus
+
+    layout: 
+      sequence: 80
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:36:&SESSION.::&DEBUG.::::'
+        page: 36 # Zoom & Scroll
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: See a list of the chart examples demonstrating the use of Zoom and Scroll, making it easier to view charts rendering large volumes of data
+
+  - # ====== Entry: Customizing Data Labels ======================
+    id: 3670556014270232433
+    label: 
+      label: Customizing Data Labels
+
+    icon: 
+      image/icon-css-classes: fa-text-height
+
+    layout: 
+      sequence: 70
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:37:&SESSION.::&DEBUG.::::'
+        page: 37 # Customizing Data Labels
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: See a list of the chart examples demonstrating how to declaratively style chart data labels using CSS, or customize the labels using JavaScript
+
+  - # ====== Entry: Formatting Values ============================
+    id: 3670595626879362653
+    label: 
+      label: Formatting Values
+
+    icon: 
+      image/icon-css-classes: fa-eur
+
+    layout: 
+      sequence: 60
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:38:&SESSION.::&DEBUG.::::'
+        page: 38 # Formatting Values
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: See a list of chart examples demonstrating how to format the values on your chart
+
+  - # ====== Entry: 3D Effect ====================================
+    id: 3959075798995647984
+    label: 
+      label: 3D Effect
+
+    icon: 
+      image/icon-css-classes: fa-cube
+
+    layout: 
+      sequence: 140
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:39:&SESSION.::&DEBUG.::::'
+        page: 39 # 3D Effect
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: See a list of chart examples demonstrating how to apply the 3D effect on your chart
+
+  - # ====== Entry: Data Densification ===========================
+    id: 4016133022357244440
+    label: 
+      label: Data Densification
+
+    icon: 
+      image/icon-css-classes: fa-plus
+
+    layout: 
+      sequence: 110
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:40:&SESSION.::&DEBUG.::::'
+        page: 40 # Data Densification
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: See a list of chart examples demonstrating how a multi-series chart with differing series lengths, use new data densification handling to render the data points correctly on your chart
+
+- # ====== List: JS Customizations =============================
+  id: 3667852179420603241
+  identification: 
+    name: JS Customizations
+
+  subscription: 
+    version-number: 1089078564
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Line Chart (Reference Object via JavaScript Cu
+    id: 48116717803119409
+    label: 
+      label: Line Chart (Reference Object via JavaScript Customizations) - Page 15
+
+    icon: 
+      image/icon-css-classes: fa-line-chart
+
+    layout: 
+      sequence: 65
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:15:&SESSION.::&DEBUG.::::'
+        page: 15 # Line
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Line chart rendering a Reference Object line, via some custom JavaScript code
+
+  - # ====== Entry: Gantt Chart (Reference Object via JavaScript C
+    id: 48126072138334712
+    label: 
+      label: Gantt Chart (Reference Object via JavaScript Code) - Page 3
+
+    icon: 
+      image/icon-css-classes: fa-line-chart
+
+    layout: 
+      sequence: 75
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:3:&SESSION.::&DEBUG.::::'
+        page: 3 # Gantt
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Gantt chart rendering a Reference Object line for the current date, via some custom JavaScript code
+
+  - # ====== Entry: Pie Chart ( Dashboard Page ) - Page 24 =======
+    id: 258054821386209942
+    label: 
+      label: Pie Chart ( Dashboard Page ) - Page 24
+
+    icon: 
+      image/icon-css-classes: fa-funnel-chart
+
+    layout: 
+      sequence: 85
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:24:&SESSION.::&DEBUG.::::'
+        page: 24 # Dashboard - Pies
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a dashboard of Pie & Donut charts, using custom JavaScript code to style the chart title during chart initialization.
+
+  - # ====== Entry: Combination Chart (Regular v Mixed Frequency T
+    id: 3667852352237603244
+    label: 
+      label: Combination Chart (Regular v Mixed Frequency Time Axis) - Page 25
+
+    icon: 
+      image/icon-css-classes: fa-combo-chart
+
+    layout: 
+      sequence: 10
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:25:&SESSION.::&DEBUG.::::'
+        page: 25 # Combination
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Combination chart rendering DateTime information on the x-axis, using the Time Axis Type attribute
+
+  - # ====== Entry: Line Chart (Time Axis) - Page 15 =============
+    id: 3667852766404603245
+    label: 
+      label: Line Chart (Time Axis) - Page 15
+
+    icon: 
+      image/icon-css-classes: fa-line-chart
+
+    layout: 
+      sequence: 15
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:15:&SESSION.::&DEBUG.::::'
+        page: 15 # Line
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Line chart rendering DateTime information on the x-axis, using the Time Axis Type attribute
+
+  - # ====== Entry: Stock - Page 7 ===============================
+    id: 3667853085014603246
+    label: 
+      label: Stock - Page 7
+
+    icon: 
+      image/icon-css-classes: fa-stock-chart
+
+    layout: 
+      sequence: 20
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:7:&SESSION.::&DEBUG.::::'
+        page: 7 # Stock
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Donut chart with custom labels defined
+
+  - # ====== Entry: Scatter (Dynamic Y-Axis Min/Max via JavaScript
+    id: 3667853547478603246
+    label: 
+      label: Scatter (Dynamic Y-Axis Min/Max via JavaScript Code) -  Page 8
+
+    icon: 
+      image/icon-css-classes: fa-scatter-chart
+
+    layout: 
+      sequence: 30
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:8:&SESSION.::&DEBUG.::::'
+        page: 8 # Scatter
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates how to dynamically change the y-axis minimum and maximum values, based upon values selected by the end user
+
+  - # ====== Entry: Funnel Chart ( Multi-select Selection Mode) - 
+    id: 3718840974502567077
+    label: 
+      label: Funnel Chart ( Multi-select Selection Mode) - Page 22
+
+    icon: 
+      image/icon-css-classes: fa-funnel-chart
+
+    layout: 
+      sequence: 40
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:22:&SESSION.::&DEBUG.::::'
+        page: 22 # Funnel
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Funnel chart with an optionChange listener added to the initialization of the chart.
+
+  - # ====== Entry: Area Chart ( Legend JavaScript Code Customizat
+    id: 3931314593306143029
+    label: 
+      label: Area Chart ( Legend JavaScript Code Customization ) - Page 2
+
+    icon: 
+      image/icon-css-classes: fa-area-chart
+
+    layout: 
+      sequence: 50
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:2:&SESSION.::&DEBUG.::::'
+        page: 2 # Area
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates an Area chart with custom icons used in the legend, based on Static Application Files.
+
+  - # ====== Entry: Pie Chart ( Master Detail Chart Links ) - Page
+    id: 3959071478041573085
+    label: 
+      label: Pie Chart ( Master Detail Chart Links ) - Page 4
+
+    icon: 
+      image/icon-css-classes: fa-funnel-chart
+
+    layout: 
+      sequence: 60
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:4:&SESSION.::&DEBUG.::::'
+        page: 4 # Pie
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a 3D Pie chart, using custom JavaScript code to set the 3D effect during chart initialization.
+
+  - # ====== Entry: Funnel Chart (3D Effect) - Page 22 ===========
+    id: 3959075158659633291
+    label: 
+      label: Funnel Chart (3D Effect) - Page 22
+
+    icon: 
+      image/icon-css-classes: fa-funnel-chart
+
+    layout: 
+      sequence: 45
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:22:&SESSION.::&DEBUG.::::'
+        page: 22 # Funnel
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a 3D Funnel chart, setting the threeDEffect attribute of the ojChart API via custom JavaScript code.
+
+- # ====== List: DAs ===========================================
+  id: 3668159983165307231
+  identification: 
+    name: DAs
+
+  subscription: 
+    version-number: 1089078564
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Line Chart ( Show/Hide Labels via Dynamic Acti
+    id: 593799055755518609
+    label: 
+      label: Line Chart ( Show/Hide Labels via Dynamic Action ) -  Page 15
+
+    icon: 
+      image/icon-css-classes: fa-line-chart
+
+    layout: 
+      sequence: 60
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:15:&SESSION.::&DEBUG.::::'
+        page: 15 # Line
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Line chart with dynamic actions to show/hide the data labels on the chart
+
+  - # ====== Entry: Area Chart (Line Types) - Page 2 =============
+    id: 3668160229925307238
+    label: 
+      label: Area Chart (Line Types) - Page 2
+
+    icon: 
+      image/icon-css-classes: fa-area-chart
+
+    layout: 
+      sequence: 10
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:2:&SESSION.::&DEBUG.::::'
+        page: 2 # Area
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates an Area chart with dynamic actions to change the type of line used to render the chart elements
+
+  - # ====== Entry: Bar Chart (Dual Y Axis with custom Labels) - P
+    id: 3668160671517307239
+    label: 
+      label: Bar Chart (Dual Y Axis with custom Labels) - Page 9
+
+    icon: 
+      image/icon-css-classes: fa-bar-chart
+
+    layout: 
+      sequence: 15
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:9:&SESSION.::&DEBUG.::::'
+        page: 9 # Bar
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: 'This example demonstrates a Bar chart with dynamic actions to change the orientation of the chart, or render the chart elements as stacked or unstacked '
+
+  - # ====== Entry: Combination Chart (Data Label Positions) - Pag
+    id: 3668160986139307239
+    label: 
+      label: Combination Chart (Data Label Positions) - Page 25
+
+    icon: 
+      image/icon-css-classes: fa-combo-chart
+
+    layout: 
+      sequence: 20
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:25:&SESSION.::&DEBUG.::::'
+        page: 25 # Combination
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Combination chart with dynamic actions to change the type of line used to represent a series
+
+  - # ====== Entry: Line Chart (Data Labels & Line Styles) -  Page
+    id: 3668161409798307240
+    label: 
+      label: Line Chart (Data Labels & Line Styles) -  Page 15
+
+    icon: 
+      image/icon-css-classes: fa-line-chart
+
+    layout: 
+      sequence: 30
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:15:&SESSION.::&DEBUG.::::'
+        page: 15 # Line
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Line chart with dynamic actions to change the chart type and orientation
+
+  - # ====== Entry: Pie Chart - Page 4 ===========================
+    id: 3668164329722338539
+    label: 
+      label: Pie Chart - Page 4
+
+    icon: 
+      image/icon-css-classes: fa-pie-chart
+
+    layout: 
+      sequence: 40
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:4:&SESSION.::&DEBUG.::::'
+        page: 4 # Pie
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Pie chart with dynamic actions to increase or decrease the Legend Size
+
+  - # ====== Entry: Range - Page 23 ==============================
+    id: 3668165109394341273
+    label: 
+      label: Range - Page 23
+
+    icon: 
+      image/icon-css-classes: fa-range-chart-bar
+
+    layout: 
+      sequence: 50
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:23:&SESSION.::&DEBUG.::::'
+        page: 23 # Range
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Range chart with dynamic actions to change the chart orientation
+
+- # ====== List: Series Color ==================================
+  id: 3668186057197445265
+  identification: 
+    name: Series Color
+
+  subscription: 
+    version-number: 1089078564
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Pie Chart (Series Colors) - Page 4 ===========
+    id: 1008198868167014934
+    label: 
+      label: Pie Chart (Series Colors) - Page 4
+
+    icon: 
+      image/icon-css-classes: fa-pie-chart
+
+    layout: 
+      sequence: 25
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:4:&SESSION.::&DEBUG.::::'
+        page: 4 # Pie
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates the various options available to define a color on a chart series
+
+  - # ====== Entry: Bar Chart (Series Colors) - Page 9 ===========
+    id: 3668186587468445269
+    label: 
+      label: Bar Chart (Series Colors) - Page 9
+
+    icon: 
+      image/icon-css-classes: fa-bar-chart
+
+    layout: 
+      sequence: 15
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:9:&SESSION.::&DEBUG.::::'
+        page: 9 # Bar
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates the various options available to define a color on a chart series
+
+- # ====== List: Y2 Axis =======================================
+  id: 3668195674914503529
+  identification: 
+    name: Y2 Axis
+
+  subscription: 
+    version-number: 1089078564
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Bar Chart (Dual Y Axis with custom Labels) - P
+    id: 3668195802714503529
+    label: 
+      label: Bar Chart (Dual Y Axis with custom Labels) - Page 9
+
+    icon: 
+      image/icon-css-classes: fa-bar-chart
+
+    layout: 
+      sequence: 15
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:9:&SESSION.::&DEBUG.::::'
+        page: 9 # Bar
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Bar Chart with a y2 Axis, and dual-axis setting
+
+  - # ====== Entry: Line with Area Chart (Data Labels & Line Style
+    id: 3668196604387527302
+    label: 
+      label: Line with Area Chart (Data Labels & Line Styles) - Page 18
+
+    icon: 
+      image/icon-css-classes: fa-line-area-chart
+
+    layout: 
+      sequence: 25
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:18:&SESSION.::&DEBUG.::::'
+        page: 18 # Line with Area
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Line with Area Chart with a y2 Axis
+
+- # ====== List: JET Plug-in Components ========================
+  id: 3668199434449549854
+  identification: 
+    name: JET Plug-in Components
+
+  subscription: 
+    version-number: 1089078564
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Oracle JET Legend Component as a Plug-in - Pag
+    id: 3668199659603549854
+    label: 
+      label: Oracle JET Legend Component as a Plug-in - Page 26
+
+    icon: 
+      image/icon-css-classes: fa-plug
+
+    layout: 
+      sequence: 15
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:26:&SESSION.::&DEBUG.::::'
+        page: 26 # Oracle JET ojLegend Plug-in
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates the Oracle JET Legend, as an APEX plug-in
+
+- # ====== List: Time Axis =====================================
+  id: 3668201696163570720
+  identification: 
+    name: Time Axis
+
+  subscription: 
+    version-number: 1089078564
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Combination Chart (Regular v Mixed Frequency T
+    id: 1008200090979044498
+    label: 
+      label: Combination Chart (Regular v Mixed Frequency Time Axis) - Page 25
+
+    icon: 
+      image/icon-css-classes: fa-area-chart
+
+    layout: 
+      sequence: 10
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:25:&SESSION.::&DEBUG.::::'
+        page: 25 # Combination
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates the use of the Time Axis Type attribute, to render DATETIME information on a multi-series Combination chart
+
+  - # ====== Entry: Line Chart (Time Axis) - Page 15 =============
+    id: 3668202375169570720
+    label: 
+      label: Line Chart (Time Axis) - Page 15
+
+    icon: 
+      image/icon-css-classes: fa-line-chart
+
+    layout: 
+      sequence: 30
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:15:&SESSION.::&DEBUG.::::'
+        page: 15 # Line
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates the use of the Time Axis Type attribute, to render DATETIME information on a Line chart
+
+- # ====== List: Zoom & Scroll =================================
+  id: 3668207748457607927
+  identification: 
+    name: Zoom & Scroll
+
+  subscription: 
+    version-number: 1089078564
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Line Chart (Time Axis) - Page 15 =============
+    id: 3668208357646607928
+    label: 
+      label: Line Chart (Time Axis) - Page 15
+
+    icon: 
+      image/icon-css-classes: fa-line-chart
+
+    layout: 
+      sequence: 15
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:15:&SESSION.::&DEBUG.::::'
+        page: 15 # Line
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: |
+        This example demonstrates:
+        a) a Line chart rendering DateTime information on the x-axis, using the Time Axis Type attribute
+        b) reset Zoom option - resetting the viewport settings of the chart xAxis
+
+  - # ====== Entry: Stock - Page 7 ===============================
+    id: 3668208752115607928
+    label: 
+      label: Stock - Page 7
+
+    icon: 
+      image/icon-css-classes: fa-stock-chart
+
+    layout: 
+      sequence: 20
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:7:&SESSION.::&DEBUG.::::'
+        page: 7 # Stock
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Donut chart with custom labels defined
+
+- # ====== List: Styling Data Labels ===========================
+  id: 3670554751703228443
+  identification: 
+    name: Styling Data Labels
+
+  subscription: 
+    version-number: 1089078564
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Pareto Chart, pg 20 ==========================
+    id: 724113034967529994
+    label: 
+      label: Pareto Chart, pg 20
+
+    icon: 
+      image/icon-css-classes: fa-combo-chart
+
+    layout: 
+      sequence: 20
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:20:&SESSION.::&DEBUG.::::'
+        page: 20 # Pareto Chart
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Pareto Chart, based on a declaratively defined Combination Chart, with a Bar series and a Line series, where individual values are represented in descending order by bars, and the cumulative total is represented by the line.
+
+  - # ====== Entry: Bar Chart (Dual Y Axis with custom Labels) - P
+    id: 3670554920964228467
+    label: 
+      label: Bar Chart (Dual Y Axis with custom Labels) - Page 9
+
+    icon: 
+      image/icon-css-classes: fa-bar-chart
+
+    layout: 
+      sequence: 15
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:9:&SESSION.::&DEBUG.::::'
+        page: 9 # Bar
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Bar chart rendering data labels customized to use different font sizes and colors, via the CSS Classes declarative attribute
+
+- # ====== List: Formatting Values =============================
+  id: 3670584365362331774
+  identification: 
+    name: Formatting Values
+
+  subscription: 
+    version-number: 1089078564
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Line Chart (Time Axis) - Page 15 =============
+    id: 309429975876579128
+    label: 
+      label: Line Chart (Time Axis) - Page 15
+
+    icon: 
+      image/icon-css-classes: fa-eur
+
+    layout: 
+      sequence: 70
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:15:&SESSION.::&DEBUG.::::'
+        page: 15 # Line
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Line chart with currency formatting of the y-axis values, and Date formatting of the x-axis values, using their respective axis-level attribute Format
+
+  - # ====== Entry: Area Chart (Y-Axis Value Formatting) - Page 2 
+    id: 3670584488990331777
+    label: 
+      label: Area Chart (Y-Axis Value Formatting) - Page 2
+
+    icon: 
+      image/icon-css-classes: fa-area-chart
+
+    layout: 
+      sequence: 15
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:2:&SESSION.::&DEBUG.::::'
+        page: 2 # Area
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates an Area chart with numeric formatting of the y-axis values, using the y-axis Format attribute
+
+  - # ====== Entry: Bar Chart (Stacked Percent) - Page 9 =========
+    id: 3670584972861331778
+    label: 
+      label: Bar Chart (Stacked Percent) - Page 9
+
+    icon: 
+      image/icon-css-classes: fa-bar-chart
+
+    layout: 
+      sequence: 20
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:9:&SESSION.::&DEBUG.::::'
+        page: 9 # Bar
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Bar chart with percent formatting applied to the y-axis values, via the y-axis Format attribute
+
+  - # ====== Entry: Bubble - Page 11 =============================
+    id: 3671257400375483808
+    label: 
+      label: Bubble - Page 11
+
+    icon: 
+      image/icon-css-classes: fa-bubble-chart
+
+    layout: 
+      sequence: 30
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:11:&SESSION.::&DEBUG.::::'
+        page: 11 # Bubble
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Bubble chart with percent formatting of the x and y axis values, using their respective axis-level Format attribute
+
+  - # ====== Entry: Donut Chart (Sorting) - Page 4 ===============
+    id: 3671258613917531133
+    label: 
+      label: Donut Chart (Sorting) - Page 4
+
+    icon: 
+      image/icon-css-classes: fa-donut-chart
+
+    layout: 
+      sequence: 40
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:4:&SESSION.::&DEBUG.::::'
+        page: 4 # Pie
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Donut chart with decimal formatting of the values, using the chart attribute Format
+
+  - # ====== Entry: Range - Page 23 ==============================
+    id: 3671259501081541519
+    label: 
+      label: Range - Page 23
+
+    icon: 
+      image/icon-css-classes: fa-range-chart-bar
+
+    layout: 
+      sequence: 50
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:23:&SESSION.::&DEBUG.::::'
+        page: 23 # Range
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Range chart with decimal formatting of the y-axis values, using the y-axis attribute Format
+
+  - # ====== Entry: Stock - Page 7 ===============================
+    id: 3671259849864548956
+    label: 
+      label: Stock - Page 7
+
+    icon: 
+      image/icon-css-classes: fa-stock-chart
+
+    layout: 
+      sequence: 60
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:7:&SESSION.::&DEBUG.::::'
+        page: 7 # Stock
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates a Stock chart with currency formatting of the y-axis values, and Date formatting of the x-axis values, using their respective axis-level attribute Format
+
+- # ====== List: 3D Effect =====================================
+  id: 3959078209803697436
+  identification: 
+    name: 3D Effect
+
+  subscription: 
+    version-number: 1089078564
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Funnel Chart (3D Effect) - Page 22 ===========
+    id: 3959078456299697438
+    label: 
+      label: Funnel Chart (3D Effect) - Page 22
+
+    icon: 
+      image/icon-css-classes: fa-area-chart
+
+    layout: 
+      sequence: 10
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:22:&SESSION.::&DEBUG.::::'
+        page: 22 # Funnel
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates how to render a 3D Funnel chart, by setting the threeDEffect attribute of the ojChart API via custom JavaScript code
+
+  - # ====== Entry: Pie Chart (Master Detail Chart Links) - Page 4
+    id: 3959078876340697439
+    label: 
+      label: Pie Chart (Master Detail Chart Links) - Page 4
+
+    icon: 
+      image/icon-css-classes: fa-line-chart
+
+    layout: 
+      sequence: 15
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:4:&SESSION.::&DEBUG.::::'
+        page: 4 # Pie
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates how to render a 3D Pie chart, by setting the threeDEffect attribute of the ojChart API via custom JavaScript code
+
+- # ====== List: Data Densify ==================================
+  id: 4016135818570274177
+  identification: 
+    name: Data Densify
+
+  subscription: 
+    version-number: 1089078564
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Bar Chart (Series Name Column Mapping)  - Page
+    id: 191774344586788569
+    label: 
+      label: Bar Chart (Series Name Column Mapping)  - Page 9
+
+    icon: 
+      image/icon-css-classes: fa-area-chart
+
+    layout: 
+      sequence: 11
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:9:&SESSION.::&DEBUG.::::'
+        page: 9 # Bar
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates how to render a multi-series Bar chart, with differing numbers of data points per series, using <strong>Fill Gaps in Chart Data</strong> chart-level attribute.
+
+  - # ====== Entry: Data Densification - Page 14 =================
+    id: 371212200292670767
+    label: 
+      label: Data Densification - Page 14
+
+    icon: 
+      image/icon-css-classes: fa-code-group
+
+    layout: 
+      sequence: 5
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:14:&SESSION.::&DEBUG.::::'
+        page: 14 # Data Densification
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This page demonstrates the behaviour of the new <strong>Fill Gaps in Chart Data</strong> and associated <strong>Sort Order</strong> attributes, in the densification of a multi-series chart.  There are also examples of opting out of the densification logic, to base the chart data and ordering solely on the chart query provided.
+
+  - # ====== Entry: Bar Chart (Series Colors) - Page 9 ===========
+    id: 4016136050068274179
+    label: 
+      label: Bar Chart (Series Colors) - Page 9
+
+    icon: 
+      image/icon-css-classes: fa-area-chart
+
+    layout: 
+      sequence: 10
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:9:&SESSION.::&DEBUG.::::'
+        page: 9 # Bar
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates how to render a single-series Bar chart, with the ordering controlled via the series SQL query
+
+  - # ====== Entry: Line Chart (Mixed Series Length - Quantity > 4
+    id: 4016136423202274180
+    label: 
+      label: Line Chart (Mixed Series Length - Quantity > 40) - Page 15
+
+    icon: 
+      image/icon-css-classes: fa-line-chart
+
+    layout: 
+      sequence: 15
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:15:&SESSION.::&DEBUG.::::'
+        page: 15 # Line
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      1.: This example demonstrates how to render a multi-series Line with Area chart, with series of differing lengths
+

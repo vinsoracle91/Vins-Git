@@ -1,0 +1,39 @@
+---
+- # ====== Classic Navigation Bar Entry: Help ==================
+  id: 3215198815907136107
+  label: 
+    label: Help
+
+  layout: 
+    sequence: 10
+
+  icon: 
+    image/icon-css-classes: fa-question-circle
+    alt-attribute: fa-question
+
+  feedback: 
+    feedback-entry: false
+
+  link: 
+    target: 
+      url: 'f?p=&APP_ID.:help:&SESSION.::&DEBUG.::::'
+      page: HELP
+
+- # ====== Classic Navigation Bar Entry: Logout ================
+  id: 8209160179528502985
+  label: 
+    label: Logout
+
+  layout: 
+    sequence: 20
+
+  icon: 
+    height: 32
+    width: 32
+
+  feedback: 
+    feedback-entry: false
+
+  link: 
+    target: '&LOGOUT_URL.'
+

@@ -1,0 +1,33 @@
+---
+- # ====== Install Script: Tables ==============================
+  id: 2581490615626914959
+  identification: 
+    name: Tables
+
+  execution: 
+    sequence: 10
+
+- # ====== Install Script: Triggers ============================
+  id: 2581719623826059266
+  identification: 
+    name: Triggers
+
+  execution: 
+    sequence: 20
+
+- # ====== Install Script: Sample Data =========================
+  id: 2581739330583099017
+  identification: 
+    name: Sample Data
+
+  execution: 
+    sequence: 30
+
+- # ====== Install Script: Set plscope_settings ================
+  id: 3357941828784740531
+  identification: 
+    name: Set plscope_settings
+
+  execution: 
+    sequence: 5
+

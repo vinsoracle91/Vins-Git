@@ -1,0 +1,2596 @@
+---
+# ====== Page: Area ==========================================
+id: 2
+identification: 
+  name: Area
+  alias: AREA
+  title: Area
+
+appearance: 
+  page-mode: Normal
+  page-template: Standard
+  template-options: 
+  - '#DEFAULT#'
+
+navigation-menu: 
+  override-user-interface-level: false
+
+navigation: 
+  cursor-focus: Do not focus cursor
+  warn-on-unsaved-changes: false
+
+javascript: 
+  function-and-global-variable-declaration: var gAppImages = "#APP_IMAGES#";
+
+security: 
+  authentication: Page Requires Authentication
+  deep-linking: Application Default
+  page-access-protection: Arguments Must Have Checksum
+  form-auto-complete: On
+  browser-cache: Application Default
+
+session-management: 
+  rejoin-sessions: Application Default
+
+advanced: 
+  enable-duplicate-page-submissions: Yes - Enable page to be re-posted
+  reload-on-submit: Always
+
+server-cache: 
+  caching: Disabled
+
+help: 
+  help-text: No help is available for this page.
+
+regions: 
+- # ====== Region: Area Chart (Legend JavaScript Code Customizat
+  id: 243899705302538233
+  identification: 
+    name: Area Chart (Legend JavaScript Code Customization)
+    type: Chart
+
+  source: 
+    location: None
+
+  layout: 
+    sequence: 90
+    parent-region: No Parent
+    slot: BODY
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    template: Standard
+    template-options: 
+    - '#DEFAULT#'
+    - t-Region--scrollBody
+    render-components: Above Content
+
+  accessibility: 
+    use-landmark: true
+    landmark-type: Template Default
+
+  advanced: 
+    region-display-selector: true
+    exclude-title-from-translation: false
+
+  security: 
+    escape-special-characters: true
+
+  customization: 
+    customizable: Not Customizable By End Users
+
+  attributes: 
+    id: 243899835491538234
+    chart: 
+      type: Area
+
+    appearance: 
+      orientation: Vertical
+      stack: true
+
+    layout: 
+      maximum-width: 500
+      height: 400
+
+    data-cursor: 
+      cursor: Yes
+      behavior: Smooth
+      dim-on-hover: false
+
+    multi-series-chart-data: 
+      fill-gaps-in-chart-data: true
+      sort-order: Label - Ascending
+      render-gap-as-zero: true
+
+    settings: 
+      zoom-and-scroll: No
+
+    animation: 
+      on-display: Automatic
+      on-data-change: Automatic
+
+    tooltip: 
+      show: true
+      show-series-name: true
+      show-group-name: true
+      show-value: true
+
+    legend: 
+      show: true
+      position: Top
+      hide-and-show-behavior: Rescale
+
+    advanced: 
+      initialization-javascript-function: |
+        function( options ) {
+            
+            // Setup a callback function which gets called when data is retrieved, to manipulate the series data
+            options.dataFilter = function( data ) {
+        
+                // Define a new legend, rather than using the default legend behavior applied to the chart
+                data.legend = {
+                    sections:[{ items:[] }]
+                }
+                
+                // Loop through the chart series, to define the new legend
+                for ( var i = 0; i < data.series.length; i++ ) {
+                
+                    // Manually add each series to the legend
+                    // Note: We assume that images exist in Shared Components 'Static Application Files', with a size of 16x16 pixel for every series entry.
+                    //       The variable 'gAppImages' is defined in the page attribute 'Function and Global Variable Declaration'
+                    data.legend.sections[ 0 ].items.push( {
+                        text: data.series[ i ].name,
+                        color: data.series[ i ].color,
+                        symbolType: "image",
+                        source: gAppImages + "legend/" + data.series[ i ].name + ".png"
+                    });
+                    
+                    // Do not automatically include the series in the legend
+                    data.series[ i ].displayInLegend = 'off';
+                }  
+                return data;
+            }
+            return options;
+        }
+
+    series: 
+    - # ====== Series: Store =======================================
+      id: 243899931149538235
+      identification: 
+        name: Store
+
+      execution: 
+        sequence: 10
+
+      source: 
+        location: Local Database
+        type: SQL Query
+        sql-query: |
+          select a.product_name, b.quantity, b.customer, a.product_description
+          from eba_demo_chart_products a, eba_demo_chart_orders b
+          where a.product_id = b.product_id
+          and b.customer = 'Store A'
+
+      order-by: 
+        type: None
+
+      column-mapping: 
+        label: PRODUCT_NAME
+        value: QUANTITY
+
+      appearance: 
+        assigned-to-y2-axis: false
+
+      line: 
+        type: Automatic
+
+      marker: 
+        show: Automatic
+        shape: Automatic
+
+      label: 
+        show: false
+
+    - # ====== Series: Acme ========================================
+      id: 243900007661538236
+      identification: 
+        name: Acme
+
+      execution: 
+        sequence: 20
+
+      source: 
+        location: Local Database
+        type: SQL Query
+        sql-query: |
+          select a.product_name, b.quantity, b.customer,a.product_name || ' ' || a.product_description || '<br/>X: ' ||
+                              a.list_price || '<br/>Y: ' || a.product_id "shortDesc", a.product_description
+          from eba_demo_chart_products a, eba_demo_chart_orders b
+          where a.product_id = b.product_id
+          and b.customer = 'Acme Store'
+
+      order-by: 
+        type: None
+
+      column-mapping: 
+        label: PRODUCT_NAME
+        value: QUANTITY
+        custom-tooltip: shortDesc
+
+      appearance: 
+        assigned-to-y2-axis: false
+
+      line: 
+        type: Automatic
+
+      marker: 
+        show: Automatic
+        shape: Automatic
+
+      label: 
+        show: false
+
+    - # ====== Series: Shop ========================================
+      id: 243900139201538237
+      identification: 
+        name: Shop
+
+      execution: 
+        sequence: 30
+
+      source: 
+        location: Local Database
+        type: SQL Query
+        sql-query: |
+          select a.product_name, b.quantity, b.customer, a.product_description
+          from eba_demo_chart_products a, eba_demo_chart_orders b
+          where a.product_id = b.product_id
+          and b.customer = 'Shop C'
+
+      order-by: 
+        type: None
+
+      column-mapping: 
+        label: PRODUCT_NAME
+        value: QUANTITY
+
+      appearance: 
+        assigned-to-y2-axis: false
+
+      line: 
+        type: Automatic
+
+      marker: 
+        show: Automatic
+        shape: Automatic
+
+      label: 
+        show: false
+
+      advanced: 
+        static-id: c_series
+
+    - # ====== Series: Deli ========================================
+      id: 243900205514538238
+      identification: 
+        name: Deli
+
+      execution: 
+        sequence: 40
+
+      source: 
+        location: Local Database
+        type: SQL Query
+        sql-query: |
+          select a.product_name, b.quantity, b.customer, a.product_description
+          from eba_demo_chart_products a, eba_demo_chart_orders b
+          where a.product_id = b.product_id
+          and b.customer = 'Deli'
+
+      order-by: 
+        type: None
+
+      column-mapping: 
+        label: PRODUCT_NAME
+        value: QUANTITY
+
+      appearance: 
+        assigned-to-y2-axis: false
+
+      line: 
+        type: Automatic
+
+      marker: 
+        show: Automatic
+        shape: Automatic
+
+      label: 
+        show: false
+
+    axes: 
+    - # ====== Axis: x =============================================
+      id: 243900303216538239
+      identification: 
+        name: x
+        show-axis: true
+        title: X-Axis Title
+
+      value: 
+        format-scaling: Automatic
+        baseline-scaling: Zero
+        scale: Linear
+
+      major-ticks: 
+        show: Yes
+
+      minor-ticks: 
+        show: false
+
+      tick-label: 
+        show: true
+        rotation: true
+        position: Outside
+
+    - # ====== Axis: y =============================================
+      id: 243900438147538240
+      identification: 
+        name: y
+        show-axis: true
+        title: Y-Axis Title
+
+      value: 
+        format-scaling: Automatic
+        baseline-scaling: Zero
+        scale: Linear
+
+      appearance: 
+        position: Automatic
+
+      major-ticks: 
+        show: Yes
+
+      minor-ticks: 
+        show: false
+
+      tick-label: 
+        show: true
+
+- # ====== Region: Area Chart (Line Types) =====================
+  id: 435652487297166431
+  identification: 
+    name: Area Chart (Line Types)
+    type: Chart
+
+  source: 
+    location: None
+
+  layout: 
+    sequence: 50
+    parent-region: No Parent
+    slot: BODY
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    template: Standard
+    template-options: 
+    - '#DEFAULT#'
+    - js-showMaximizeButton
+    - t-Region--scrollBody
+    render-components: Above Content
+
+  accessibility: 
+    use-landmark: true
+    landmark-type: Template Default
+
+  advanced: 
+    static-id: area2
+    region-display-selector: true
+    exclude-title-from-translation: false
+
+  security: 
+    escape-special-characters: true
+
+  customization: 
+    customizable: Not Customizable By End Users
+
+  attributes: 
+    id: 435653069265166436
+    chart: 
+      type: Area
+
+    appearance: 
+      orientation: Vertical
+      stack: true
+
+    layout: 
+      height: 400
+
+    data-cursor: 
+      cursor: Automatic
+      behavior: Automatic
+      dim-on-hover: true
+
+    multi-series-chart-data: 
+      fill-gaps-in-chart-data: true
+      sort-order: Label - Ascending
+      render-gap-as-zero: true
+
+    settings: 
+      zoom-and-scroll: No
+
+    animation: 
+      on-display: Automatic
+      on-data-change: Automatic
+
+    tooltip: 
+      show: true
+      show-series-name: true
+      show-group-name: true
+      show-value: true
+
+    legend: 
+      show: true
+      position: End
+      hide-and-show-behavior: No Rescaling
+
+    series: 
+    - # ====== Series: Store A =====================================
+      id: 435653086345166437
+      identification: 
+        name: Store A
+
+      execution: 
+        sequence: 10
+
+      source: 
+        location: Local Database
+        type: SQL Query
+        sql-query: |
+          select a.product_name, b.quantity, b.customer
+          from eba_demo_chart_products a, eba_demo_chart_orders b
+          where a.product_id = b.product_id
+          and customer = 'Store A'
+
+      order-by: 
+        type: None
+
+      column-mapping: 
+        label: PRODUCT_NAME
+        value: QUANTITY
+
+      appearance: 
+        assigned-to-y2-axis: false
+
+      line: 
+        type: Automatic
+
+      marker: 
+        show: Automatic
+        shape: Automatic
+
+      label: 
+        show: false
+
+    - # ====== Series: Acme Store ==================================
+      id: 435653245217166438
+      identification: 
+        name: Acme Store
+
+      execution: 
+        sequence: 20
+
+      source: 
+        location: Local Database
+        type: SQL Query
+        sql-query: |
+          select a.product_name, b.quantity, b.customer
+          from eba_demo_chart_products a, eba_demo_chart_orders b
+          where a.product_id = b.product_id
+          and customer = 'Acme Store'
+
+      order-by: 
+        type: None
+
+      column-mapping: 
+        label: PRODUCT_NAME
+        value: QUANTITY
+
+      appearance: 
+        assigned-to-y2-axis: false
+
+      line: 
+        type: Automatic
+
+      marker: 
+        show: Automatic
+        shape: Automatic
+
+      label: 
+        show: false
+
+    - # ====== Series: Shop C ======================================
+      id: 435653332278166439
+      identification: 
+        name: Shop C
+
+      execution: 
+        sequence: 30
+
+      source: 
+        location: Local Database
+        type: SQL Query
+        sql-query: |
+          select a.product_name, b.quantity, b.customer
+          from eba_demo_chart_products a, eba_demo_chart_orders b
+          where a.product_id = b.product_id
+          and customer = 'Shop C'
+
+      order-by: 
+        type: None
+
+      column-mapping: 
+        label: PRODUCT_NAME
+        value: QUANTITY
+
+      appearance: 
+        assigned-to-y2-axis: false
+
+      line: 
+        type: Automatic
+
+      marker: 
+        show: Automatic
+        shape: Automatic
+
+      label: 
+        show: false
+
+      advanced: 
+        static-id: c_series
+
+    - # ====== Series: Deli ========================================
+      id: 435653434271166440
+      identification: 
+        name: Deli
+
+      execution: 
+        sequence: 40
+
+      source: 
+        location: Local Database
+        type: SQL Query
+        sql-query: |
+          select a.product_name, b.quantity, b.customer
+          from eba_demo_chart_products a, eba_demo_chart_orders b
+          where a.product_id = b.product_id
+          and customer = 'Deli'
+
+      order-by: 
+        type: None
+
+      column-mapping: 
+        label: PRODUCT_NAME
+        value: QUANTITY
+
+      appearance: 
+        assigned-to-y2-axis: false
+
+      line: 
+        type: Automatic
+
+      marker: 
+        show: Automatic
+        shape: Automatic
+
+      label: 
+        show: false
+
+    axes: 
+    - # ====== Axis: x =============================================
+      id: 435653483349166441
+      identification: 
+        name: x
+        show-axis: true
+
+      value: 
+        format-scaling: Automatic
+        baseline-scaling: Zero
+        scale: Linear
+
+      major-ticks: 
+        show: Yes
+
+      minor-ticks: 
+        show: false
+
+      tick-label: 
+        show: true
+        rotation: true
+        position: Outside
+
+    - # ====== Axis: y =============================================
+      id: 435653655537166442
+      identification: 
+        name: y
+        show-axis: true
+        title: Y1 Axis Title
+
+      value: 
+        format-scaling: Automatic
+        baseline-scaling: Zero
+        scale: Linear
+
+      appearance: 
+        position: Automatic
+
+      major-ticks: 
+        show: Yes
+
+      minor-ticks: 
+        show: false
+
+      tick-label: 
+        show: true
+
+    - # ====== Axis: y2 ============================================
+      id: 435653709551166443
+      identification: 
+        name: y2
+        show-axis: true
+        title: Y2 Axis Title
+
+      value: 
+        format-scaling: Automatic
+        baseline-scaling: Zero
+        scale: Linear
+
+      appearance: 
+        position: Automatic
+
+      major-ticks: 
+        show: Yes
+
+      minor-ticks: 
+        show: false
+
+      tick-label: 
+        show: true
+
+      dual-y-axes: 
+        show: Yes
+        splitter-position: 0.7
+
+- # ====== Region: Area Chart (Line Types) Information =========
+  id: 435654912345166455
+  identification: 
+    name: Area Chart (Line Types) Information
+    type: Static Content
+
+  source: 
+    html-code: |
+      This example demonstrates various attributes of an Area chart.<p/>
+      
+      <strong>Hide and Show Behavior</strong> - Use this chart-level attribute to support hide and show behavior using the chart legend. The legend uses the <strong>Without Rescale</strong> Hide and Show behavior, allowing a user to hide and unhide a series by clicking the chart legend markers. The chart axes will not rescale, which is useful to remain in context. <p/>
+      <strong>Dynamic Actions</strong> - Through the use of Dynamic actions, use the buttons to the top right of the chart to change the line type of the chart series. Line type specifies the shape of the data point connectors on the chart.<p/>
+      <p>
+      For more information on the Area chart settings, refer to the Oracle JET Cookbook <a href="https://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=areaChart&demo=lineTypes" target="_blank">Area Chart: Line Types</a> example.
+
+  layout: 
+    sequence: 10
+    parent-region: Area Chart (Line Types) # 435652487297166431
+    slot: SUB_REGIONS
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    template: Collapsible
+    template-options: 
+    - '#DEFAULT#'
+    - is-collapsed
+    - t-Region--scrollBody
+    render-components: Above Content
+
+  accessibility: 
+    use-landmark: true
+    landmark-type: Template Default
+
+  advanced: 
+    region-display-selector: false
+    exclude-title-from-translation: false
+
+  customization: 
+    customizable: Not Customizable By End Users
+
+  attributes: 
+    settings: 
+      output-as: HTML
+      expand-shortcuts: false
+
+- # ====== Region: Area Chart (Markers) ========================
+  id: 444907566422921713
+  identification: 
+    name: Area Chart (Markers)
+    type: Chart
+
+  source: 
+    location: Local Database
+    type: SQL Query
+    sql-query: |
+      select id,
+             project as label,
+             NVL((select sum(t.budget) from eba_demo_chart_tasks t where t.project =  p.id and t.budget > t.cost),0) as value,
+             'under budget' as series ,
+             'green' as color
+        from eba_demo_chart_projects p
+      union all
+      select id,
+             project as label,
+             NVL((select sum(t.budget) from eba_demo_chart_tasks t where t.project =  p.id and t.budget <= t.cost),0) as value,
+             'over budget' as series ,
+             'red' as color
+        from eba_demo_chart_projects p
+
+  order-by: 
+    type: None
+
+  layout: 
+    sequence: 70
+    parent-region: No Parent
+    slot: BODY
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    template: Standard
+    template-options: 
+    - '#DEFAULT#'
+    - js-showMaximizeButton
+    - i-h480
+    - t-Region--scrollBody
+    render-components: Above Content
+
+  accessibility: 
+    use-landmark: true
+    landmark-type: Template Default
+
+  advanced: 
+    region-display-selector: true
+    exclude-title-from-translation: false
+
+  security: 
+    escape-special-characters: true
+
+  customization: 
+    customizable: Not Customizable By End Users
+
+  attributes: 
+    id: 444907917409921716
+    chart: 
+      type: Area
+
+    appearance: 
+      orientation: Vertical
+      stack: true
+
+    data-cursor: 
+      cursor: Automatic
+      behavior: Automatic
+      dim-on-hover: false
+
+    multi-series-chart-data: 
+      fill-gaps-in-chart-data: true
+      sort-order: Label - Ascending
+      render-gap-as-zero: true
+
+    settings: 
+      zoom-and-scroll: No
+
+    animation: 
+      on-display: None
+      on-data-change: None
+
+    tooltip: 
+      show: true
+      show-series-name: true
+      show-group-name: true
+      show-value: true
+
+    legend: 
+      show: true
+      position: Automatic
+      hide-and-show-behavior: None
+
+    series: 
+    - # ====== Series: Budget ======================================
+      id: 444909159700921722
+      identification: 
+        name: Budget
+
+      execution: 
+        sequence: 10
+
+      source: 
+        location: Region Source
+
+      column-mapping: 
+        series-name: SERIES
+        label: LABEL
+        value-aggregation: No Aggregation
+        value: VALUE
+        label-tooltip: LABEL
+
+      appearance: 
+        assigned-to-y2-axis: false
+
+      line: 
+        type: Automatic
+
+      marker: 
+        show: Yes
+        shape: Circle
+
+      label: 
+        show: true
+        position: None
+
+    axes: 
+    - # ====== Axis: x =============================================
+      id: 444908338657921718
+      identification: 
+        name: x
+        show-axis: true
+
+      value: 
+        format-scaling: Automatic
+        baseline-scaling: Zero
+        scale: Linear
+
+      major-ticks: 
+        show: Yes
+
+      minor-ticks: 
+        show: false
+
+      tick-label: 
+        show: true
+        rotation: false
+        position: Outside
+
+    - # ====== Axis: y =============================================
+      id: 444908690291921721
+      identification: 
+        name: y
+        show-axis: true
+
+      value: 
+        format-scaling: Automatic
+        baseline-scaling: Zero
+        scale: Linear
+
+      appearance: 
+        position: Automatic
+
+      major-ticks: 
+        show: Yes
+
+      minor-ticks: 
+        show: false
+
+      tick-label: 
+        show: true
+
+- # ====== Region: About this page =============================
+  id: 444909637967921729
+  identification: 
+    name: About this page
+    type: Static Content
+
+  source: 
+    html-code: <p>&PRODUCT_NAME. native Area charts, using Oracle JET Data Visualizations, are showcased on this page. Explore the wide range of chart attributes declaratively available with our native charts, to format and customise the style of your charts.</p>
+
+  layout: 
+    sequence: 10
+    parent-region: No Parent
+    slot: BODY
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    template: Alert
+    template-options: 
+    - '#DEFAULT#'
+    - t-Alert--horizontal
+    - t-Alert--customIcons
+    - t-Alert--info
+    icon: fa-area-chart
+    render-components: Above Content
+
+  accessibility: 
+    use-landmark: true
+    landmark-type: Template Default
+
+  advanced: 
+    region-display-selector: false
+    exclude-title-from-translation: false
+
+  customization: 
+    customizable: Not Customizable By End Users
+
+  attributes: 
+    settings: 
+      output-as: HTML
+      expand-shortcuts: false
+
+- # ====== Region: Region Display Selector =====================
+  id: 444910163045921729
+  identification: 
+    name: Region Display Selector
+    type: Region Display Selector
+
+  layout: 
+    sequence: 20
+    parent-region: No Parent
+    slot: BODY
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    template: Blank with Attributes
+    template-options: 
+    - '#DEFAULT#'
+    render-components: Above Content
+
+  accessibility: 
+    use-landmark: true
+    landmark-type: Template Default
+
+  advanced: 
+    region-display-selector: true
+    exclude-title-from-translation: false
+
+  customization: 
+    customizable: Not Customizable By End Users
+
+  attributes: 
+    settings: 
+      mode: View Single Region
+      display-region-icons: false
+      include-'show-all': true
+      remember-selection: No
+
+- # ====== Region: Area Chart (Y-Axis Value Formatting) ========
+  id: 444912085970921731
+  identification: 
+    name: Area Chart (Y-Axis Value Formatting)
+    type: Chart
+
+  source: 
+    location: None
+
+  layout: 
+    sequence: 60
+    parent-region: No Parent
+    slot: BODY
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    template: Standard
+    template-options: 
+    - '#DEFAULT#'
+    - js-showMaximizeButton
+    - t-Region--scrollBody
+    render-components: Above Content
+
+  accessibility: 
+    use-landmark: true
+    landmark-type: Template Default
+
+  advanced: 
+    region-display-selector: true
+    exclude-title-from-translation: false
+
+  security: 
+    escape-special-characters: true
+
+  customization: 
+    customizable: Not Customizable By End Users
+
+  attributes: 
+    id: 444912577535921732
+    chart: 
+      type: Combination
+
+    appearance: 
+      orientation: Horizontal
+      stack: false
+
+    data-cursor: 
+      cursor: Automatic
+      behavior: Automatic
+      dim-on-hover: true
+
+    multi-series-chart-data: 
+      fill-gaps-in-chart-data: true
+      sort-order: Label - Ascending
+      render-gap-as-zero: true
+
+    settings: 
+      zoom-and-scroll: No
+
+    animation: 
+      on-display: Automatic
+      on-data-change: None
+
+    tooltip: 
+      show: true
+      show-series-name: false
+      show-group-name: false
+      show-value: true
+
+    legend: 
+      show: true
+      position: Automatic
+      hide-and-show-behavior: None
+
+    series: 
+    - # ====== Series: Tasks By Budget/Cost ========================
+      id: 444913780332921733
+      identification: 
+        name: Tasks By Budget/Cost
+        type: Area
+
+      execution: 
+        sequence: 10
+
+      source: 
+        location: Local Database
+        type: SQL Query
+        sql-query: |
+          select task_name,
+                 budget
+            from eba_demo_chart_tasks
+           where budget > 2000
+          order by 2,1
+
+      order-by: 
+        type: None
+
+      column-mapping: 
+        label: TASK_NAME
+        value: BUDGET
+
+      appearance: 
+        assigned-to-y2-axis: false
+
+      line: 
+        style: Solid
+        type: Automatic
+
+      marker: 
+        show: Automatic
+        shape: Automatic
+
+      label: 
+        show: true
+        position: Automatic
+
+    - # ====== Series: Average Budget ==============================
+      id: 445150477779647618
+      identification: 
+        name: Average Budget
+        type: Line
+
+      execution: 
+        sequence: 20
+
+      source: 
+        location: Local Database
+        type: SQL Query
+        sql-query: |
+          select task_name, round(avg_budget,2) from (  
+              select task_name,
+                 avg(budget) over () avg_budget
+            from eba_demo_chart_tasks
+           where budget > 2000
+          order by 2,1)
+
+      order-by: 
+        type: None
+
+      column-mapping: 
+        label: TASK_NAME
+        value: ROUND(AVG_BUDGET,2)
+
+      appearance: 
+        assigned-to-y2-axis: false
+
+      line: 
+        style: Solid
+        width: 4
+        type: Automatic
+
+      marker: 
+        show: Automatic
+        shape: Automatic
+
+      label: 
+        show: false
+
+    axes: 
+    - # ====== Axis: x =============================================
+      id: 444912949093921733
+      identification: 
+        name: x
+        show-axis: true
+
+      value: 
+        format-scaling: Automatic
+        baseline-scaling: Zero
+        scale: Linear
+
+      major-ticks: 
+        show: Yes
+
+      minor-ticks: 
+        show: false
+
+      tick-label: 
+        show: true
+        rotation: true
+        position: Outside
+
+    - # ====== Axis: y =============================================
+      id: 444913369723921733
+      identification: 
+        name: y
+        show-axis: true
+        title: Y Axis Title
+
+      value: 
+        format: Decimal
+        format-scaling: Thousand
+        baseline-scaling: Minimum
+        scale: Linear
+
+      appearance: 
+        position: Automatic
+
+      major-ticks: 
+        show: Yes
+
+      minor-ticks: 
+        show: true
+
+      tick-label: 
+        show: true
+
+- # ====== Region: Area Chart (Stacked) ========================
+  id: 444914241283921735
+  identification: 
+    name: Area Chart (Stacked)
+    type: Chart
+
+  source: 
+    location: None
+
+  layout: 
+    sequence: 30
+    parent-region: No Parent
+    slot: BODY
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    template: Standard
+    template-options: 
+    - '#DEFAULT#'
+    - js-showMaximizeButton
+    - t-Region--scrollBody
+    render-components: Above Content
+
+  accessibility: 
+    use-landmark: true
+    landmark-type: Template Default
+
+  advanced: 
+    static-id: area1
+    region-display-selector: true
+    exclude-title-from-translation: false
+
+  security: 
+    escape-special-characters: true
+
+  customization: 
+    customizable: Not Customizable By End Users
+
+  attributes: 
+    id: 444914552684921735
+    chart: 
+      type: Area
+
+    appearance: 
+      orientation: Vertical
+      stack: true
+
+    layout: 
+      maximum-width: 500
+      height: 400
+
+    data-cursor: 
+      cursor: Yes
+      behavior: Smooth
+      dim-on-hover: false
+
+    multi-series-chart-data: 
+      fill-gaps-in-chart-data: true
+      sort-order: Label - Descending
+      render-gap-as-zero: true
+
+    settings: 
+      zoom-and-scroll: No
+
+    animation: 
+      on-display: Automatic
+      on-data-change: Automatic
+
+    tooltip: 
+      show: true
+      show-series-name: true
+      show-group-name: true
+      show-value: true
+
+    legend: 
+      show: true
+      position: Top
+      hide-and-show-behavior: Rescale
+
+    series: 
+    - # ====== Series: Deli ========================================
+      id: 435652437790166430
+      identification: 
+        name: Deli
+
+      execution: 
+        sequence: 10
+
+      source: 
+        location: Local Database
+        type: SQL Query
+        sql-query: |
+          select a.product_name, b.quantity, b.customer, a.product_description
+          from eba_demo_chart_products a, eba_demo_chart_orders b
+          where a.product_id = b.product_id
+          and b.customer = 'Deli'
+
+      order-by: 
+        type: None
+
+      column-mapping: 
+        label: PRODUCT_NAME
+        value: QUANTITY
+
+      appearance: 
+        assigned-to-y2-axis: false
+
+      line: 
+        type: Automatic
+
+      marker: 
+        show: Automatic
+        shape: Automatic
+
+      label: 
+        show: false
+
+    - # ====== Series: Store A =====================================
+      id: 444916179678921737
+      identification: 
+        name: Store A
+
+      execution: 
+        sequence: 20
+
+      source: 
+        location: Local Database
+        type: SQL Query
+        sql-query: |
+          select a.product_name, b.quantity, b.customer, a.product_description
+          from eba_demo_chart_products a, eba_demo_chart_orders b
+          where a.product_id = b.product_id
+          and b.customer = 'Store A'
+
+      order-by: 
+        type: None
+
+      column-mapping: 
+        label: PRODUCT_NAME
+        value: QUANTITY
+
+      appearance: 
+        assigned-to-y2-axis: false
+
+      line: 
+        type: Automatic
+
+      marker: 
+        show: Automatic
+        shape: Automatic
+
+      label: 
+        show: false
+
+    - # ====== Series: Acme Store ==================================
+      id: 444916496837921737
+      identification: 
+        name: Acme Store
+
+      execution: 
+        sequence: 30
+
+      source: 
+        location: Local Database
+        type: SQL Query
+        sql-query: |
+          select a.product_name, b.quantity, b.customer,a.product_name || ' ' || a.product_description || '<br/>X: ' ||
+                              a.list_price || '<br/>Y: ' || a.product_id "shortDesc", a.product_description
+          from eba_demo_chart_products a, eba_demo_chart_orders b
+          where a.product_id = b.product_id
+          and b.customer = 'Acme Store'
+
+      order-by: 
+        type: None
+
+      column-mapping: 
+        label: PRODUCT_NAME
+        value: QUANTITY
+        custom-tooltip: shortDesc
+
+      appearance: 
+        assigned-to-y2-axis: false
+
+      line: 
+        type: Automatic
+
+      marker: 
+        show: Automatic
+        shape: Automatic
+
+      label: 
+        show: false
+
+    - # ====== Series: Shop C ======================================
+      id: 444916905964921738
+      identification: 
+        name: Shop C
+
+      execution: 
+        sequence: 40
+
+      source: 
+        location: Local Database
+        type: SQL Query
+        sql-query: |
+          select a.product_name, b.quantity, b.customer, a.product_description
+          from eba_demo_chart_products a, eba_demo_chart_orders b
+          where a.product_id = b.product_id
+          and b.customer = 'Shop C'
+
+      order-by: 
+        type: None
+
+      column-mapping: 
+        label: PRODUCT_NAME
+        value: QUANTITY
+
+      appearance: 
+        assigned-to-y2-axis: false
+
+      line: 
+        type: Automatic
+
+      marker: 
+        show: Automatic
+        shape: Automatic
+
+      label: 
+        show: false
+
+      advanced: 
+        static-id: c_series
+
+    axes: 
+    - # ====== Axis: x =============================================
+      id: 554922181715961953
+      identification: 
+        name: x
+        show-axis: true
+
+      value: 
+        format-scaling: Automatic
+        baseline-scaling: Zero
+        scale: Linear
+
+      major-ticks: 
+        show: Yes
+
+      minor-ticks: 
+        show: false
+
+      tick-label: 
+        show: true
+        rotation: true
+        position: Outside
+
+    - # ====== Axis: y =============================================
+      id: 554922251281961954
+      identification: 
+        name: y
+        show-axis: true
+
+      value: 
+        format-scaling: Automatic
+        baseline-scaling: Zero
+        scale: Linear
+
+      appearance: 
+        position: Automatic
+
+      major-ticks: 
+        show: Yes
+
+      minor-ticks: 
+        show: false
+
+      tick-label: 
+        show: true
+
+- # ====== Region:  Area Chart (Stacked) Information ===========
+  id: 445079893229917862
+  identification: 
+    name: ' Area Chart (Stacked) Information'
+    type: Static Content
+
+  source: 
+    html-code: |
+      This example demonstrates various attributes of an Area chart.<p/>
+      
+      <strong>Hide and Show Behavior</strong> - Use this chart-level attribute to support hide and show behavior using the chart legend. The legend uses the <strong>With Rescale</strong> Hide and Show behavior, allowing a user to hide and unhide a series by clicking the chart legend markers. This allows the user to focus on specific series that are interesting to them. The chart axes will rescale as the minimum and maximum values of the visible data increase or decrease. This can be useful for series with largely varying values.<p/>
+      <strong>Sort Order</strong> - Use this new chart-level attribute to set the sort order of the chart. In this example, the attribute is set to <strong>Label - Descending</strong>, which orders the x-axis labels in descending order.<p/>
+      <strong>Dynamic Actions</strong> - Through the use of Dynamic actions, use the Horizontal/Vertical buttons to the top left of the chart to change the orientiation of the data items on the charts, and the Stack/Unstack buttons to the top right of the chart to change the rendering style of the data items. When multiple series are shown, stacking is recommended to prevent values from being obscured.<p/>
+      <p>
+      For more information on the Area chart settings, refer to the Oracle JET Cookbook <a href="https://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=areaChart&demo=default" target="_blank">Area Chart: Basic</a> and <a href="https://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=areaChart&demo=hideShow" target="_blank">Area Chart: Hide & Show</a> examples.
+      
+      
+
+  layout: 
+    sequence: 10
+    parent-region: Area Chart (Stacked) # 444914241283921735
+    slot: SUB_REGIONS
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    template: Collapsible
+    template-options: 
+    - '#DEFAULT#'
+    - is-collapsed
+    - t-Region--scrollBody
+    render-components: Above Content
+
+  accessibility: 
+    use-landmark: true
+    landmark-type: Template Default
+
+  advanced: 
+    region-display-selector: false
+    exclude-title-from-translation: false
+
+  customization: 
+    customizable: Not Customizable By End Users
+
+  attributes: 
+    settings: 
+      output-as: HTML
+      expand-shortcuts: false
+
+- # ====== Region: Area Chart (Color JavaScript Code Customizati
+  id: 686436621043758132
+  identification: 
+    name: Area Chart (Color JavaScript Code Customization)
+    type: Chart
+
+  source: 
+    location: None
+
+  layout: 
+    sequence: 80
+    parent-region: No Parent
+    slot: BODY
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    template: Standard
+    template-options: 
+    - '#DEFAULT#'
+    - js-showMaximizeButton
+    - t-Region--scrollBody
+    render-components: Above Content
+
+  accessibility: 
+    use-landmark: true
+    landmark-type: Template Default
+
+  advanced: 
+    static-id: area_js
+    region-display-selector: true
+    exclude-title-from-translation: false
+
+  security: 
+    escape-special-characters: true
+
+  customization: 
+    customizable: Not Customizable By End Users
+
+  attributes: 
+    id: 686437165877758137
+    chart: 
+      type: Area
+
+    appearance: 
+      orientation: Vertical
+      stack: true
+
+    layout: 
+      maximum-width: 500
+      height: 400
+
+    data-cursor: 
+      cursor: Yes
+      behavior: Smooth
+      dim-on-hover: false
+
+    multi-series-chart-data: 
+      fill-gaps-in-chart-data: true
+      sort-order: Label - Ascending
+      render-gap-as-zero: true
+
+    settings: 
+      zoom-and-scroll: No
+
+    animation: 
+      on-display: Automatic
+      on-data-change: Automatic
+
+    tooltip: 
+      show: true
+      show-series-name: true
+      show-group-name: true
+      show-value: true
+
+    legend: 
+      show: true
+      position: Top
+      hide-and-show-behavior: Rescale
+
+    advanced: 
+      initialization-javascript-function: |
+        function( options ) {
+        
+            // Setup a callback function which gets called when data is retrieved, to manipulate the series data
+            options.dataFilter = function( data ) {
+                
+                data.series[ 0 ].color = "#309fdb";
+                data.series[ 0 ].borderColor = "black";
+                data.series[ 0 ].markerDisplayed = "on";
+                data.series[ 0 ].markerShape = "plus";
+                data.series[ 0 ].markerColor = "#309fdb";
+                data.series[ 0 ].markerSize = 8;
+                data.series[ 0 ].pattern = "smallChecker";
+                return data;
+            };
+        
+            return options;
+        }
+
+    series: 
+    - # ====== Series: Store A =====================================
+      id: 686437246880758138
+      identification: 
+        name: Store A
+
+      execution: 
+        sequence: 10
+
+      source: 
+        location: Local Database
+        type: SQL Query
+        sql-query: |
+          select a.product_name, b.quantity, b.customer, a.product_description
+          from eba_demo_chart_products a, eba_demo_chart_orders b
+          where a.product_id = b.product_id
+          and b.customer = 'Store A'
+
+      order-by: 
+        type: None
+
+      column-mapping: 
+        label: PRODUCT_NAME
+        value: QUANTITY
+
+      appearance: 
+        assigned-to-y2-axis: false
+
+      line: 
+        type: Automatic
+
+      marker: 
+        show: Automatic
+        shape: Automatic
+
+      label: 
+        show: false
+
+    - # ====== Series: Acme Store ==================================
+      id: 686437304590758139
+      identification: 
+        name: Acme Store
+
+      execution: 
+        sequence: 20
+
+      source: 
+        location: Local Database
+        type: SQL Query
+        sql-query: |
+          select a.product_name, b.quantity, b.customer,a.product_name || ' ' || a.product_description || '<br/>X: ' ||
+                              a.list_price || '<br/>Y: ' || a.product_id "shortDesc", a.product_description
+          from eba_demo_chart_products a, eba_demo_chart_orders b
+          where a.product_id = b.product_id
+          and b.customer = 'Acme Store'
+
+      order-by: 
+        type: None
+
+      column-mapping: 
+        label: PRODUCT_NAME
+        value: QUANTITY
+        custom-tooltip: shortDesc
+
+      appearance: 
+        assigned-to-y2-axis: false
+
+      line: 
+        type: Automatic
+
+      marker: 
+        show: Automatic
+        shape: Automatic
+
+      label: 
+        show: false
+
+    - # ====== Series: Shop C ======================================
+      id: 686437433432758140
+      identification: 
+        name: Shop C
+
+      execution: 
+        sequence: 30
+
+      source: 
+        location: Local Database
+        type: SQL Query
+        sql-query: |
+          select a.product_name, b.quantity, b.customer, a.product_description
+          from eba_demo_chart_products a, eba_demo_chart_orders b
+          where a.product_id = b.product_id
+          and b.customer = 'Shop C'
+
+      order-by: 
+        type: None
+
+      column-mapping: 
+        label: PRODUCT_NAME
+        value: QUANTITY
+
+      appearance: 
+        assigned-to-y2-axis: false
+
+      line: 
+        type: Automatic
+
+      marker: 
+        show: Automatic
+        shape: Automatic
+
+      label: 
+        show: false
+
+      advanced: 
+        static-id: c_series
+
+    - # ====== Series: Deli ========================================
+      id: 686437502010758141
+      identification: 
+        name: Deli
+
+      execution: 
+        sequence: 40
+
+      source: 
+        location: Local Database
+        type: SQL Query
+        sql-query: |
+          select a.product_name, b.quantity, b.customer, a.product_description
+          from eba_demo_chart_products a, eba_demo_chart_orders b
+          where a.product_id = b.product_id
+          and b.customer = 'Deli'
+
+      order-by: 
+        type: None
+
+      column-mapping: 
+        label: PRODUCT_NAME
+        value: QUANTITY
+
+      appearance: 
+        assigned-to-y2-axis: false
+
+      line: 
+        type: Automatic
+
+      marker: 
+        show: Automatic
+        shape: Automatic
+
+      label: 
+        show: false
+
+    axes: 
+    - # ====== Axis: x =============================================
+      id: 686437649675758142
+      identification: 
+        name: x
+        show-axis: true
+        title: X-Axis Title
+
+      value: 
+        format-scaling: Automatic
+        baseline-scaling: Zero
+        scale: Linear
+
+      major-ticks: 
+        show: Yes
+
+      minor-ticks: 
+        show: false
+
+      tick-label: 
+        show: true
+        rotation: true
+        position: Outside
+
+    - # ====== Axis: y =============================================
+      id: 686437734583758143
+      identification: 
+        name: y
+        show-axis: true
+        title: Y-Axis Title
+
+      value: 
+        format-scaling: Automatic
+        baseline-scaling: Zero
+        scale: Linear
+
+      appearance: 
+        position: Automatic
+
+      major-ticks: 
+        show: Yes
+
+      minor-ticks: 
+        show: false
+
+      tick-label: 
+        show: true
+
+- # ====== Region: Area Chart (Color JavaScript Code Customizati
+  id: 686437867451758144
+  identification: 
+    name: Area Chart (Color JavaScript Code Customization) Information
+    type: Static Content
+
+  source: 
+    html-code: |
+      This example demonstrates how to customize the series style of an Area chart data, via JavaScript code customizations.<p/>
+      
+      <strong>JavaScript Code</strong> - Use this chart-level attribute to customize your chart attributes and data.  To customize your chart, a callback function, options.dataFilter, must be defined.  Within that function, apply your customizations to the data.  Any chart initialization changes, to attributes such as the chart title, type, or orientation, can also be made.  The JavaScript Code should follow a template similar to the following:<br/>
+      
+      <pre>
+      function( options ) {
+      
+          // Setup a callback function which gets called when data is retrieved, to manipulate the series data
+          options.dataFilter = function( data ) {
+              
+              data.series[ 0 ].color = "#ED6647";
+              data.series[ 0 ].borderColor = "#0F3248";
+              data.series[ 0 ].markerDisplayed = "on";
+              data.series[ 0 ].markerShape = "plus";
+              data.series[ 0 ].markerColor = "red";
+              data.series[ 0 ].markerSize = 8;
+              data.series[ 0 ].pattern = "smallChecker";
+              return data;
+          };
+      
+          return options;
+      }
+      </pre><p/>
+      
+      <p>
+      For more information on the JET chart options, refer to the Oracle JET <a href="&OJCHART_API_URL." target="_blank">ojChart API</a>.
+      </p>
+      <p>
+      For more information on the Area chart style settings, refer to the Oracle JET Cookbook <a href="&JET_COOKBOOK_URL.?component=areaChart&demo=styles#" target="_blank">Area Chart: Styles</a> example.
+
+  layout: 
+    sequence: 10
+    parent-region: Area Chart (Color JavaScript Code Customization) # 686436621043758132
+    slot: SUB_REGIONS
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    template: Collapsible
+    template-options: 
+    - '#DEFAULT#'
+    - is-collapsed
+    - t-Region--scrollBody
+    render-components: Above Content
+
+  accessibility: 
+    use-landmark: true
+    landmark-type: Template Default
+
+  advanced: 
+    region-display-selector: false
+    exclude-title-from-translation: false
+
+  customization: 
+    customizable: Not Customizable By End Users
+
+  attributes: 
+    settings: 
+      output-as: HTML
+      expand-shortcuts: false
+
+- # ====== Region: breadcrumb ==================================
+  id: 809239316028824128
+  identification: 
+    name: breadcrumb
+    type: Breadcrumb
+
+  source: 
+    breadcrumb: ' Breadcrumb' # 8209161969061502997
+
+  layout: 
+    sequence: 10
+    parent-region: No Parent
+    slot: REGION_POSITION_01
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    template: Title Bar
+    template-options: 
+    - '#DEFAULT#'
+    - t-BreadcrumbRegion--useBreadcrumbTitle
+    render-components: Above Content
+
+  accessibility: 
+    use-landmark: true
+    landmark-type: Template Default
+
+  advanced: 
+    region-display-selector: false
+    exclude-title-from-translation: false
+
+  customization: 
+    customizable: Not Customizable By End Users
+
+  attributes: 
+    appearance: 
+      breadcrumb-template: Breadcrumb
+      template-options: 
+      - '#DEFAULT#'
+
+- # ====== Region: Area Chart (Legend JavaScript Code Customizat
+  id: 3711517449630065523
+  identification: 
+    name: Area Chart (Legend JavaScript Code Customization) Information
+    type: Static Content
+
+  source: 
+    html-code: |
+      This example demonstrates how to customize the icons associated with series entries of the legend on an Area chart data, via JavaScript code customizations.<p/>
+      
+      <strong>JavaScript Code</strong> - Use this chart-level attribute to customize your chart attributes and data.  To customize your chart, a callback function, options.dataFilter, must be defined.  Within that function, apply your customizations to the data.  Any chart initialization changes, to attributes such as the chart title, type, or orientation, can also be made.  The JavaScript Code used on this example is as follows:<br/>
+      
+      <pre>
+      function( options ) {
+          
+          // Setup a callback function which gets called when data is retrieved, to manipulate the series data
+          options.dataFilter = function( data ) {
+      
+              // Define a new legend, rather than using the default legend behavior applied to the chart
+              data.legend = {
+                  sections:[{ items:[] }]
+              }
+              
+              // Loop through the chart series, to define the new legend
+              for ( var i = 0; i < data.series.length; i++ ) {
+              
+                  // Manually add each series to the legend
+                  // Note: We assume that images exist in Shared Components 'Static Application Files', with a size of 16x16 pixel for every series entry.
+                  //       The variable 'gAppImages' is defined in the page attribute 'Function and Global Variable Declaration'
+                  data.legend.sections[ 0 ].items.push( {
+                      text: data.series[ i ].name,
+                      color: data.series[ i ].color,
+                      symbolType: "image",
+                      source: gAppImages + "legend/" + data.series[ i ].name + ".png"
+                  });
+                  
+                  // Do not automatically include the series in the legend
+                  data.series[ i ].displayInLegend = 'off';
+              }  
+              return data;
+          }
+          return options;
+      }
+      </pre><p/>
+      
+      <p>
+      For more information on the JET chart legend options, refer to the Oracle JET <a href="&OJCHART_API_URL.#LegendItem" target="_blank">LegendItem symbolType</a> attributes in the ojChart API.
+      </p>
+      <p>
+      For more information on the Area chart style settings, refer to the Oracle JET Cookbook <a href="&JET_COOKBOOK_URL.?component=areaChart&demo=styles#" target="_blank">Area Chart: Styles</a> example.
+
+  layout: 
+    sequence: 10
+    parent-region: Area Chart (Legend JavaScript Code Customization) # 243899705302538233
+    slot: SUB_REGIONS
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    template: Collapsible
+    template-options: 
+    - '#DEFAULT#'
+    - is-collapsed
+    - t-Region--scrollBody
+    render-components: Above Content
+
+  accessibility: 
+    use-landmark: true
+    landmark-type: Template Default
+
+  advanced: 
+    region-display-selector: false
+    exclude-title-from-translation: false
+
+  customization: 
+    customizable: Not Customizable By End Users
+
+  attributes: 
+    settings: 
+      output-as: HTML
+      expand-shortcuts: false
+
+buttons: 
+- # ====== Button: Straight ====================================
+  id: 435652592100166432
+  identification: 
+    button-name: Straight
+    label: Straight
+
+  layout: 
+    sequence: 10
+    region: Area Chart (Line Types) # 435652487297166431
+    slot: NEXT
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    button-template: Text
+    hot: false
+    template-options: 
+    - '#DEFAULT#'
+    - t-Button--pillStart
+
+  behavior: 
+    action: Defined by Dynamic Action
+    execute-validations: true
+
+- # ====== Button: Curved ======================================
+  id: 435652714295166433
+  identification: 
+    button-name: Curved
+    label: Curved
+
+  layout: 
+    sequence: 20
+    region: Area Chart (Line Types) # 435652487297166431
+    slot: NEXT
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    button-template: Text
+    hot: false
+    template-options: 
+    - '#DEFAULT#'
+    - t-Button--pill
+
+  behavior: 
+    action: Defined by Dynamic Action
+    execute-validations: true
+
+- # ====== Button: Stepped =====================================
+  id: 435652791919166434
+  identification: 
+    button-name: Stepped
+    label: Stepped
+
+  layout: 
+    sequence: 30
+    region: Area Chart (Line Types) # 435652487297166431
+    slot: NEXT
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    button-template: Text
+    hot: false
+    template-options: 
+    - '#DEFAULT#'
+    - t-Button--pill
+
+  behavior: 
+    action: Defined by Dynamic Action
+    execute-validations: true
+
+- # ====== Button: None ========================================
+  id: 435652953818166435
+  identification: 
+    button-name: None
+    label: None
+
+  layout: 
+    sequence: 50
+    region: Area Chart (Line Types) # 435652487297166431
+    slot: NEXT
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    button-template: Text
+    hot: false
+    template-options: 
+    - '#DEFAULT#'
+    - t-Button--pillEnd
+
+  behavior: 
+    action: Defined by Dynamic Action
+    execute-validations: true
+
+- # ====== Button: Segmented ===================================
+  id: 435654640954166452
+  identification: 
+    button-name: Segmented
+    label: Centered Segmented
+
+  layout: 
+    sequence: 40
+    region: Area Chart (Line Types) # 435652487297166431
+    slot: NEXT
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    button-template: Text
+    hot: false
+    template-options: 
+    - '#DEFAULT#'
+    - t-Button--pill
+
+  behavior: 
+    action: Defined by Dynamic Action
+    execute-validations: true
+
+- # ====== Button: Stack =======================================
+  id: 444917301711921738
+  identification: 
+    button-name: Stack
+    label: Stack
+
+  layout: 
+    sequence: 10
+    region: Area Chart (Stacked) # 444914241283921735
+    slot: NEXT
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    button-template: Text
+    hot: false
+    template-options: 
+    - '#DEFAULT#'
+    - t-Button--pillStart
+
+  behavior: 
+    action: Defined by Dynamic Action
+    execute-validations: true
+
+- # ====== Button: Unstack =====================================
+  id: 444917752588921747
+  identification: 
+    button-name: Unstack
+    label: Unstack
+
+  layout: 
+    sequence: 20
+    region: Area Chart (Stacked) # 444914241283921735
+    slot: NEXT
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    button-template: Text
+    hot: false
+    template-options: 
+    - '#DEFAULT#'
+    - t-Button--pillEnd
+
+  behavior: 
+    action: Defined by Dynamic Action
+    execute-validations: true
+
+- # ====== Button: Horizontal ==================================
+  id: 444918178765921747
+  identification: 
+    button-name: Horizontal
+    label: Horizontal
+
+  layout: 
+    sequence: 30
+    region: Area Chart (Stacked) # 444914241283921735
+    slot: PREVIOUS
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    button-template: Icon
+    hot: false
+    template-options: 
+    - '#DEFAULT#'
+    icon: fa-bars
+
+  behavior: 
+    action: Defined by Dynamic Action
+    execute-validations: true
+
+- # ====== Button: Vertical ====================================
+  id: 444918514360921747
+  identification: 
+    button-name: Vertical
+    label: Vertical
+
+  layout: 
+    sequence: 40
+    region: Area Chart (Stacked) # 444914241283921735
+    slot: PREVIOUS
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+
+  appearance: 
+    button-template: Icon
+    hot: false
+    template-options: 
+    - '#DEFAULT#'
+    - t-Button--pillEnd
+    icon: fa-area-chart
+
+  behavior: 
+    action: Defined by Dynamic Action
+    execute-validations: true
+
+dynamic-actions: 
+- # ====== Dynamic Action: Straight ============================
+  id: 435653844107166444
+  identification: 
+    name: Straight
+
+  execution: 
+    sequence: 50
+    event-scope: Static
+    type: Immediate
+
+  when: 
+    event: Click
+    selection-type: Button
+    button: Straight # 435652592100166432
+
+  actions: 
+  - # ====== Action: Execute JavaScript Code =====================
+    id: 435653934009166445
+    identification: 
+      action: Execute JavaScript Code
+
+    settings: 
+      code: "apex.region(\"area2\").widget().ojChart({styleDefaults:{lineType:'straight'}});"
+
+    affected-elements: 
+      selection-type: Region
+      region: Area Chart (Line Types) # 435652487297166431
+
+    execution: 
+      sequence: 10
+      event: Straight # 435653844107166444
+      fire-when-event-result-is: True
+      fire-on-initialization: false
+
+- # ====== Dynamic Action: Curved ==============================
+  id: 435654076921166446
+  identification: 
+    name: Curved
+
+  execution: 
+    sequence: 60
+    event-scope: Static
+    type: Immediate
+
+  when: 
+    event: Click
+    selection-type: Button
+    button: Curved # 435652714295166433
+
+  actions: 
+  - # ====== Action: Execute JavaScript Code =====================
+    id: 435654179574166447
+    identification: 
+      action: Execute JavaScript Code
+
+    settings: 
+      code: "apex.region(\"area2\").widget().ojChart({styleDefaults:{lineType:'curved'}});"
+
+    affected-elements: 
+      selection-type: Region
+      region: Area Chart (Line Types) # 435652487297166431
+
+    execution: 
+      sequence: 10
+      event: Curved # 435654076921166446
+      fire-when-event-result-is: True
+      fire-on-initialization: false
+
+- # ====== Dynamic Action: Stepped =============================
+  id: 435654215655166448
+  identification: 
+    name: Stepped
+
+  execution: 
+    sequence: 70
+    event-scope: Static
+    type: Immediate
+
+  when: 
+    event: Click
+    selection-type: Button
+    button: Stepped # 435652791919166434
+
+  actions: 
+  - # ====== Action: Execute JavaScript Code =====================
+    id: 435654348246166449
+    identification: 
+      action: Execute JavaScript Code
+
+    settings: 
+      code: "apex.region(\"area2\").widget().ojChart({styleDefaults:{lineType:'stepped'}});"
+
+    affected-elements: 
+      selection-type: Region
+      region: Area Chart (Line Types) # 435652487297166431
+
+    execution: 
+      sequence: 10
+      event: Stepped # 435654215655166448
+      fire-when-event-result-is: True
+      fire-on-initialization: false
+
+- # ====== Dynamic Action: None ================================
+  id: 435654434855166450
+  identification: 
+    name: None
+
+  execution: 
+    sequence: 90
+    event-scope: Static
+    type: Immediate
+
+  when: 
+    event: Click
+    selection-type: Button
+    button: None # 435652953818166435
+
+  actions: 
+  - # ====== Action: Execute JavaScript Code =====================
+    id: 435654518444166451
+    identification: 
+      action: Execute JavaScript Code
+
+    settings: 
+      code: "apex.region(\"area2\").widget().ojChart({styleDefaults:{lineType:'none'}});"
+
+    affected-elements: 
+      selection-type: Region
+      region: Area Chart (Line Types) # 435652487297166431
+
+    execution: 
+      sequence: 10
+      event: None # 435654434855166450
+      fire-when-event-result-is: True
+      fire-on-initialization: false
+
+- # ====== Dynamic Action: Segmented ===========================
+  id: 435654770747166453
+  identification: 
+    name: Segmented
+
+  execution: 
+    sequence: 80
+    event-scope: Static
+    type: Immediate
+
+  when: 
+    event: Click
+    selection-type: Button
+    button: Segmented # 435654640954166452
+
+  actions: 
+  - # ====== Action: Execute JavaScript Code =====================
+    id: 435654840252166454
+    identification: 
+      action: Execute JavaScript Code
+
+    settings: 
+      code: "apex.region(\"area2\").widget().ojChart({styleDefaults:{lineType:'centeredSegmented'}});"
+
+    affected-elements: 
+      selection-type: Region
+      region: Area Chart (Line Types) # 435652487297166431
+
+    execution: 
+      sequence: 10
+      event: Segmented # 435654770747166453
+      fire-when-event-result-is: True
+      fire-on-initialization: false
+
+- # ====== Dynamic Action: Stack Chart =========================
+  id: 444920125890921771
+  identification: 
+    name: Stack Chart
+
+  execution: 
+    sequence: 10
+    event-scope: Static
+    type: Immediate
+
+  when: 
+    event: Click
+    selection-type: Button
+    button: Stack # 444917301711921738
+
+  actions: 
+  - # ====== Action: Execute JavaScript Code =====================
+    id: 444920666240921776
+    identification: 
+      action: Execute JavaScript Code
+
+    settings: 
+      code: "apex.region(\"area1\").widget().ojChart({stack: 'on'});"
+
+    affected-elements: 
+      selection-type: Region
+      region: Area Chart (Stacked) # 444914241283921735
+
+    execution: 
+      sequence: 10
+      event: Stack Chart # 444920125890921771
+      fire-when-event-result-is: True
+      fire-on-initialization: false
+
+- # ====== Dynamic Action: Unstack Chart =======================
+  id: 444921077421921777
+  identification: 
+    name: Unstack Chart
+
+  execution: 
+    sequence: 20
+    event-scope: Static
+    type: Immediate
+
+  when: 
+    event: Click
+    selection-type: Button
+    button: Unstack # 444917752588921747
+
+  actions: 
+  - # ====== Action: Execute JavaScript Code =====================
+    id: 444921549808921777
+    identification: 
+      action: Execute JavaScript Code
+
+    settings: 
+      code: "apex.region(\"area1\").widget().ojChart({stack: 'off'});"
+
+    affected-elements: 
+      selection-type: Region
+      region: Area Chart (Stacked) # 444914241283921735
+
+    execution: 
+      sequence: 10
+      event: Unstack Chart # 444921077421921777
+      fire-when-event-result-is: True
+      fire-on-initialization: false
+
+- # ====== Dynamic Action: Horizontal Orientation ==============
+  id: 444921895801921777
+  identification: 
+    name: Horizontal Orientation
+
+  execution: 
+    sequence: 30
+    event-scope: Static
+    type: Immediate
+
+  when: 
+    event: Click
+    selection-type: Button
+    button: Horizontal # 444918178765921747
+
+  actions: 
+  - # ====== Action: Execute JavaScript Code =====================
+    id: 444922427725921778
+    identification: 
+      action: Execute JavaScript Code
+
+    settings: 
+      code: "apex.region(\"area1\").widget().ojChart({orientation: 'horizontal'});"
+
+    affected-elements: 
+      selection-type: Region
+      region: Area Chart (Stacked) # 444914241283921735
+
+    execution: 
+      sequence: 10
+      event: Horizontal Orientation # 444921895801921777
+      fire-when-event-result-is: True
+      fire-on-initialization: false
+
+- # ====== Dynamic Action: Vertical Orientation ================
+  id: 444922837948921779
+  identification: 
+    name: Vertical Orientation
+
+  execution: 
+    sequence: 40
+    event-scope: Static
+    type: Immediate
+
+  when: 
+    event: Click
+    selection-type: Button
+    button: Vertical # 444918514360921747
+
+  actions: 
+  - # ====== Action: Execute JavaScript Code =====================
+    id: 444923381513921779
+    identification: 
+      action: Execute JavaScript Code
+
+    settings: 
+      code: "apex.region(\"area1\").widget().ojChart({orientation: 'vertical'});"
+
+    affected-elements: 
+      selection-type: Region
+      region: Area Chart (Stacked) # 444914241283921735
+
+    execution: 
+      sequence: 10
+      event: Vertical Orientation # 444922837948921779
+      fire-when-event-result-is: True
+      fire-on-initialization: false
+
+computations: 
+- # ====== Computation: LAST_VIEW ==============================
+  id: 444919843997921770
+  identification: 
+    item-name: LAST_VIEW
+
+  execution: 
+    sequence: 10
+    point: Before Header
+
+  computation: 
+    type: Static Value
+    static-value: '&APP_PAGE_ID.'
+

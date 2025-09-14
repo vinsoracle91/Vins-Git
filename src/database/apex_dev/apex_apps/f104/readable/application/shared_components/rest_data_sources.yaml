@@ -1,0 +1,1493 @@
+---
+- # ====== REST Data Source: APEX Youtube Videos ===============
+  id: 6070522798070064725
+  identification: 
+    name: APEX Youtube Videos
+
+  subscription: 
+    version-number: 1089080073
+
+  source: 
+    type: HTTP
+    remote-server: www-googleapis-com-youtube-v3 # 1363013611018616818
+    url-path-prefix: videos
+
+  settings: 
+    pagination-type: NO PAGINATION
+
+  authentication: 
+    credentials: Google API Key # 4433672030432045733
+
+  rest-synchronization: 
+    job-is-active: false
+    local-table-owner: Parsing Schema
+
+  advanced: 
+    static-id: APEX_Youtube_Videos
+    pass-ecid: Y
+
+  parameters: 
+  - # ====== Parameter: id =======================================
+    id: 6070523396622064735
+    identification: 
+      name: id
+
+    parameter: 
+      type: URL Query String
+      data-type: String
+
+    value: 
+      direction: In
+      static: false
+      value: 77snU7P3ykA
+      required: false
+
+    advanced: 
+      use-for-row-search: false
+      omit-when-value-is-empty: false
+
+  - # ====== Parameter: part =====================================
+    id: 6070523820781064739
+    identification: 
+      name: part
+
+    parameter: 
+      type: URL Query String
+      data-type: String
+
+    value: 
+      direction: In
+      static: false
+      value: contentDetails
+      required: false
+
+    advanced: 
+      use-for-row-search: false
+      omit-when-value-is-empty: false
+
+  data-profiles: 
+    id: 6070519858734064700
+    identification: 
+      name: APEX Youtube Videos
+
+    data-profile: 
+      format: JSON
+      row-selector: items
+      contains-single-row: false
+      use-raw-selectors: false
+
+    advanced: 
+      encoding: Database Character Set
+
+    columns: 
+    - # ====== Column: ID ==========================================
+      id: 6070520092882064712
+      identification: 
+        column-name: ID
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: id
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 1
+        hidden: false
+
+    - # ====== Column: ETAG ========================================
+      id: 6070520416264064715
+      identification: 
+        column-name: ETAG
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: etag
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 2
+        hidden: false
+
+    - # ====== Column: KIND ========================================
+      id: 6070520687104064716
+      identification: 
+        column-name: KIND
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: kind
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 3
+        hidden: false
+
+    - # ====== Column: CAPTION =====================================
+      id: 6070520983981064718
+      identification: 
+        column-name: CAPTION
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: contentDetails.caption
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 4
+        hidden: false
+
+    - # ====== Column: DURATION ====================================
+      id: 6070521339207064718
+      identification: 
+        column-name: DURATION
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: contentDetails.duration
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 5
+        hidden: false
+
+    - # ====== Column: DIMENSION ===================================
+      id: 6070521637194064722
+      identification: 
+        column-name: DIMENSION
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: contentDetails.dimension
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 6
+        hidden: false
+
+    - # ====== Column: DEFINITION ==================================
+      id: 6070521943746064723
+      identification: 
+        column-name: DEFINITION
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: contentDetails.definition
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 7
+        hidden: false
+
+    - # ====== Column: PROJECTION ==================================
+      id: 6070522194930064723
+      identification: 
+        column-name: PROJECTION
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: contentDetails.projection
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 8
+        hidden: false
+
+    - # ====== Column: LICENSEDCONTENT =============================
+      id: 6070522472221064723
+      identification: 
+        column-name: LICENSEDCONTENT
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: contentDetails.licensedContent
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 9
+        hidden: false
+
+  operations: 
+  - # ====== Operation: GET ======================================
+    id: 6070522989525064728
+    label: 
+      label: GET
+
+    operation: 
+      url-pattern: .
+      http-method: GET
+      database-operation: Fetch Rows
+
+    remote-cache: 
+      caching: For All Users
+      cache-timeout: 10080
+
+    advanced: 
+      allow-fetching-all-rows: false
+      force-raise-http-404-error: false
+
+- # ====== REST Data Source: APEX YouTube Playlists ============
+  id: 10752626119530729546
+  identification: 
+    name: APEX YouTube Playlists
+
+  subscription: 
+    version-number: 185292499
+
+  source: 
+    type: HTTP
+    remote-server: www-googleapis-com-youtube-v3 # 1363013611018616818
+    url-path-prefix: /playlists
+
+  settings: 
+    pagination-type: NO PAGINATION
+
+  authentication: 
+    credentials: Google API Key # 4433672030432045733
+
+  rest-synchronization: 
+    job-is-active: false
+    local-table-owner: Parsing Schema
+
+  advanced: 
+    static-id: APEX_Youtube_Playlists
+    pass-ecid: Y
+
+  parameters: 
+  - # ====== Parameter: channelId ================================
+    id: 10752626717152729559
+    identification: 
+      name: channelId
+
+    parameter: 
+      type: URL Query String
+      data-type: String
+
+    value: 
+      direction: In
+      static: false
+      value: UCEpIXFjcQIztReQNLymvYrQ
+      required: false
+
+    advanced: 
+      use-for-row-search: false
+      omit-when-value-is-empty: false
+
+  - # ====== Parameter: maxResults ===============================
+    id: 10752627468460729563
+    identification: 
+      name: maxResults
+
+    parameter: 
+      type: URL Query String
+      data-type: String
+
+    value: 
+      direction: In
+      static: false
+      value: 25
+      required: false
+
+    advanced: 
+      use-for-row-search: false
+      omit-when-value-is-empty: false
+
+  - # ====== Parameter: part =====================================
+    id: 10752627884656729563
+    identification: 
+      name: part
+
+    parameter: 
+      type: URL Query String
+      data-type: String
+
+    value: 
+      direction: In
+      static: false
+      value: snippet,contentDetails,player
+      required: false
+
+    advanced: 
+      use-for-row-search: false
+      omit-when-value-is-empty: false
+
+  data-profiles: 
+    id: 10752617803445729525
+    identification: 
+      name: APEX Youtube Channel
+
+    data-profile: 
+      format: JSON
+      row-selector: items
+      contains-single-row: false
+      use-raw-selectors: false
+
+    advanced: 
+      encoding: Database Character Set
+
+    columns: 
+    - # ====== Column: ID ==========================================
+      id: 10752618032482729533
+      identification: 
+        column-name: ID
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: id
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 1
+        hidden: false
+
+    - # ====== Column: ETAG ========================================
+      id: 10752618263600729540
+      identification: 
+        column-name: ETAG
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: etag
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 2
+        hidden: false
+
+    - # ====== Column: KIND ========================================
+      id: 10752618651158729541
+      identification: 
+        column-name: KIND
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: kind
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 3
+        hidden: false
+
+    - # ====== Column: TITLE =======================================
+      id: 10752618910965729541
+      identification: 
+        column-name: TITLE
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: snippet.title
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 4
+        hidden: false
+
+    - # ====== Column: CHANNELID ===================================
+      id: 10752619165537729541
+      identification: 
+        column-name: CHANNELID
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: snippet.channelId
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 5
+        hidden: true
+
+    - # ====== Column: DESCRIPTION =================================
+      id: 10752619787967729541
+      identification: 
+        column-name: DESCRIPTION
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: snippet.localized.description
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 7
+        hidden: false
+
+    - # ====== Column: URL =========================================
+      id: 10752620056800729541
+      identification: 
+        column-name: URL
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: snippet.thumbnails.high.url
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 8
+        hidden: false
+
+    - # ====== Column: WIDTH =======================================
+      id: 10752620438222729542
+      identification: 
+        column-name: WIDTH
+
+      source: 
+        type: Data
+        data-type: NUMBER
+        primary-key: false
+
+      parsing: 
+        path-expression: snippet.thumbnails.high.width
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 9
+        hidden: false
+
+    - # ====== Column: HEIGHT ======================================
+      id: 10752620732420729542
+      identification: 
+        column-name: HEIGHT
+
+      source: 
+        type: Data
+        data-type: NUMBER
+        primary-key: false
+
+      parsing: 
+        path-expression: snippet.thumbnails.high.height
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 10
+        hidden: false
+
+    - # ====== Column: PUBLISHEDAT =================================
+      id: 10752624930629729545
+      identification: 
+        column-name: PUBLISHEDAT
+
+      source: 
+        type: Data
+        data-type: TIMESTAMP WITH TIME ZONE
+        primary-key: false
+
+      parsing: 
+        path-expression: snippet.publishedAt
+        format-mask: 'YYYY-MM-DD"T"HH24:MI:SS.FF3TZR'
+        has-time-zone: true
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 24
+        hidden: false
+
+    - # ====== Column: CHANNELTITLE ================================
+      id: 10752625244024729545
+      identification: 
+        column-name: CHANNELTITLE
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: snippet.channelTitle
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 25
+        hidden: false
+
+    - # ====== Column: ITEMCOUNT ===================================
+      id: 10752625535067729545
+      identification: 
+        column-name: ITEMCOUNT
+
+      source: 
+        type: Data
+        data-type: NUMBER
+        primary-key: false
+
+      parsing: 
+        path-expression: contentDetails.itemCount
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 26
+        hidden: false
+
+    - # ====== Column: EMBEDHTML ===================================
+      id: 10752625835586729546
+      identification: 
+        column-name: EMBEDHTML
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: player.embedHtml
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 27
+        hidden: false
+
+  operations: 
+  - # ====== Operation: GET ======================================
+    id: 10752626347504729554
+    label: 
+      label: GET
+
+    operation: 
+      url-pattern: .
+      http-method: GET
+      database-operation: Fetch Rows
+
+    remote-cache: 
+      caching: For All Users
+      cache-timeout: 10080
+
+    advanced: 
+      allow-fetching-all-rows: false
+      force-raise-http-404-error: false
+
+- # ====== REST Data Source: APEX YouTube Play List Items ======
+  id: 10752637175848729570
+  identification: 
+    name: APEX YouTube Play List Items
+
+  subscription: 
+    version-number: 1089080073
+
+  source: 
+    type: HTTP
+    remote-server: www-googleapis-com-youtube-v3 # 1363013611018616818
+    url-path-prefix: playlistItems
+
+  settings: 
+    pagination-type: NO PAGINATION
+
+  authentication: 
+    credentials: Google API Key # 4433672030432045733
+
+  rest-synchronization: 
+    job-is-active: false
+    local-table-owner: Parsing Schema
+
+  advanced: 
+    static-id: APEX_Youtube_PlayList_Items
+    pass-ecid: Y
+
+  parameters: 
+  - # ====== Parameter: maxResults ===============================
+    id: 10752638174341729571
+    identification: 
+      name: maxResults
+
+    parameter: 
+      type: URL Query String
+      data-type: String
+
+    value: 
+      direction: In
+      static: false
+      value: 25
+      required: false
+
+    advanced: 
+      use-for-row-search: false
+      omit-when-value-is-empty: false
+
+  - # ====== Parameter: part =====================================
+    id: 10752638588112729571
+    identification: 
+      name: part
+
+    parameter: 
+      type: URL Query String
+      data-type: String
+
+    value: 
+      direction: In
+      static: false
+      value: snippet,contentDetails
+      required: false
+
+    advanced: 
+      use-for-row-search: false
+      omit-when-value-is-empty: false
+
+  - # ====== Parameter: playlistId ===============================
+    id: 10752638999702729571
+    identification: 
+      name: playlistId
+
+    parameter: 
+      type: URL Query String
+      data-type: String
+
+    value: 
+      direction: In
+      static: false
+      value: PLUo-NIMouZ_vsHnHudl3W0JfeB-3F4J8_
+      required: false
+
+    advanced: 
+      use-for-row-search: false
+      omit-when-value-is-empty: false
+
+  data-profiles: 
+    id: 10752628326613729564
+    identification: 
+      name: APEX Youtube Play List Item
+
+    data-profile: 
+      format: JSON
+      row-selector: items
+      contains-single-row: false
+      use-raw-selectors: false
+
+    advanced: 
+      encoding: Database Character Set
+
+    columns: 
+    - # ====== Column: VIDEOPUBLISHEDAT ============================
+      id: 10752629121991729564
+      identification: 
+        column-name: VIDEOPUBLISHEDAT
+
+      source: 
+        type: Data
+        data-type: TIMESTAMP WITH TIME ZONE
+        primary-key: false
+
+      parsing: 
+        path-expression: contentDetails.videoPublishedAt
+        format-mask: 'YYYY"-"MM"-"DD"T"HH24":"MI:SSTZR'
+        has-time-zone: true
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 29
+        hidden: false
+
+    - # ====== Column: ID ==========================================
+      id: 10752629379420729565
+      identification: 
+        column-name: ID
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: id
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 1
+        hidden: false
+
+    - # ====== Column: ETAG ========================================
+      id: 10752629733178729565
+      identification: 
+        column-name: ETAG
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: etag
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 2
+        hidden: false
+
+    - # ====== Column: KIND ========================================
+      id: 10752630010792729565
+      identification: 
+        column-name: KIND
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: kind
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 3
+        hidden: false
+
+    - # ====== Column: TITLE =======================================
+      id: 10752630289006729565
+      identification: 
+        column-name: TITLE
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: snippet.title
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 4
+        hidden: false
+
+    - # ====== Column: CHANNELID ===================================
+      id: 10752630912882729565
+      identification: 
+        column-name: CHANNELID
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: snippet.channelId
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 6
+        hidden: false
+
+    - # ====== Column: PLAYLISTID ==================================
+      id: 10752631235931729566
+      identification: 
+        column-name: PLAYLISTID
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: snippet.playlistId
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 7
+        hidden: false
+
+    - # ====== Column: VIDEOID =====================================
+      id: 10752631829315729566
+      identification: 
+        column-name: VIDEOID
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: snippet.resourceId.videoId
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 9
+        hidden: false
+
+    - # ====== Column: URL =========================================
+      id: 10752632089840729566
+      identification: 
+        column-name: URL
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: snippet.thumbnails.high.url
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 10
+        hidden: false
+
+    - # ====== Column: WIDTH =======================================
+      id: 10752632375358729566
+      identification: 
+        column-name: WIDTH
+
+      source: 
+        type: Data
+        data-type: NUMBER
+        primary-key: false
+
+      parsing: 
+        path-expression: snippet.thumbnails.high.width
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 11
+        hidden: false
+
+    - # ====== Column: HEIGHT ======================================
+      id: 10752632729322729566
+      identification: 
+        column-name: HEIGHT
+
+      source: 
+        type: Data
+        data-type: NUMBER
+        primary-key: false
+
+      parsing: 
+        path-expression: snippet.thumbnails.high.height
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 12
+        hidden: false
+
+    - # ====== Column: DESCRIPTION =================================
+      id: 10752636599832729570
+      identification: 
+        column-name: DESCRIPTION
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: snippet.description
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 25
+        hidden: false
+
+    - # ====== Column: PUBLISHEDAT =================================
+      id: 10752636914786729570
+      identification: 
+        column-name: PUBLISHEDAT
+
+      source: 
+        type: Data
+        data-type: TIMESTAMP WITH TIME ZONE
+        primary-key: false
+
+      parsing: 
+        path-expression: snippet.publishedAt
+        format-mask: 'YYYY"-"MM"-"DD"T"HH24":"MI:SSTZR'
+        has-time-zone: true
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 26
+        hidden: false
+
+  operations: 
+  - # ====== Operation: GET ======================================
+    id: 10752637356127729570
+    label: 
+      label: GET
+
+    operation: 
+      url-pattern: .
+      http-method: GET
+      database-operation: Fetch Rows
+
+    remote-cache: 
+      caching: For All Users
+      cache-timeout: 10080
+
+    advanced: 
+      allow-fetching-all-rows: false
+      force-raise-http-404-error: false
+
+- # ====== REST Data Source: Movie Database ====================
+  id: 11352025233257553592
+  identification: 
+    name: Movie Database
+
+  subscription: 
+    version-number: 1089080073
+
+  source: 
+    type: HTTP
+    remote-server: api-themoviedb-org-3-list # 1966472155020439748
+    url-path-prefix: /10
+
+  settings: 
+    pagination-type: NO PAGINATION
+
+  authentication: 
+    credentials: Moviedb API Key # 4433674084562085636
+
+  rest-synchronization: 
+    job-is-active: false
+    local-table-owner: Parsing Schema
+
+  advanced: 
+    static-id: Movie_Database
+    pass-ecid: Y
+
+  parameters: 
+  - # ====== Parameter: language =================================
+    id: 11352026222138553593
+    identification: 
+      name: language
+
+    parameter: 
+      type: URL Query String
+      data-type: String
+
+    value: 
+      direction: In
+      static: false
+      value: en-US
+      required: false
+
+    advanced: 
+      use-for-row-search: false
+      omit-when-value-is-empty: false
+
+  data-profiles: 
+    id: 11352020741581553588
+    identification: 
+      name: Movie Database
+
+    data-profile: 
+      format: JSON
+      row-selector: items
+      contains-single-row: false
+      use-raw-selectors: false
+
+    advanced: 
+      encoding: Database Character Set
+
+    columns: 
+    - # ====== Column: ID ==========================================
+      id: 11352020987057553589
+      identification: 
+        column-name: ID
+
+      source: 
+        type: Data
+        data-type: NUMBER
+        primary-key: true
+
+      parsing: 
+        path-expression: id
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 1
+        hidden: false
+
+    - # ====== Column: ADULT =======================================
+      id: 11352021253189553589
+      identification: 
+        column-name: ADULT
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: adult
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 2
+        hidden: false
+
+    - # ====== Column: TITLE =======================================
+      id: 11352021595533553589
+      identification: 
+        column-name: TITLE
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: title
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 3
+        hidden: false
+
+    - # ====== Column: VIDEO =======================================
+      id: 11352021934425553591
+      identification: 
+        column-name: VIDEO
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: video
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 4
+        hidden: false
+
+    - # ====== Column: OVERVIEW ====================================
+      id: 11352022182671553591
+      identification: 
+        column-name: OVERVIEW
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: overview
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 5
+        hidden: false
+
+    - # ====== Column: MEDIA_TYPE ==================================
+      id: 11352022500182553591
+      identification: 
+        column-name: MEDIA_TYPE
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: media_type
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 6
+        hidden: false
+
+    - # ====== Column: POPULARITY ==================================
+      id: 11352022753189553591
+      identification: 
+        column-name: POPULARITY
+
+      source: 
+        type: Data
+        data-type: NUMBER
+        primary-key: false
+
+      parsing: 
+        path-expression: popularity
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 7
+        hidden: false
+
+    - # ====== Column: VOTE_COUNT ==================================
+      id: 11352023071146553591
+      identification: 
+        column-name: VOTE_COUNT
+
+      source: 
+        type: Data
+        data-type: NUMBER
+        primary-key: false
+
+      parsing: 
+        path-expression: vote_count
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 8
+        hidden: false
+
+    - # ====== Column: POSTER_PATH =================================
+      id: 11352023418445553591
+      identification: 
+        column-name: POSTER_PATH
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: poster_path
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 9
+        hidden: false
+
+    - # ====== Column: RELEASE_DATE ================================
+      id: 11352023667646553592
+      identification: 
+        column-name: RELEASE_DATE
+
+      source: 
+        type: Data
+        data-type: DATE
+        primary-key: false
+
+      parsing: 
+        path-expression: release_date
+        format-mask: YYYY"-"MM"-"DD
+        has-time-zone: false
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 10
+        hidden: false
+
+    - # ====== Column: VOTE_AVERAGE ================================
+      id: 11352023972966553592
+      identification: 
+        column-name: VOTE_AVERAGE
+
+      source: 
+        type: Data
+        data-type: NUMBER
+        primary-key: false
+
+      parsing: 
+        path-expression: vote_average
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 11
+        hidden: false
+
+    - # ====== Column: BACKDROP_PATH ===============================
+      id: 11352024339398553592
+      identification: 
+        column-name: BACKDROP_PATH
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: backdrop_path
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 12
+        hidden: false
+
+    - # ====== Column: ORIGINAL_TITLE ==============================
+      id: 11352024543923553592
+      identification: 
+        column-name: ORIGINAL_TITLE
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: original_title
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 13
+        hidden: false
+
+    - # ====== Column: ORIGINAL_LANGUAGE ===========================
+      id: 11352024884495553592
+      identification: 
+        column-name: ORIGINAL_LANGUAGE
+
+      source: 
+        type: Data
+        data-type: VARCHAR2
+        maximum-length: 4000
+        primary-key: false
+
+      parsing: 
+        path-expression: original_language
+
+      remote-rest-data-source-server: 
+        filterable: true
+        is-common: true
+
+      advanced: 
+        sequence: 14
+        hidden: false
+
+  operations: 
+  - # ====== Operation: GET ======================================
+    id: 11352025341301553593
+    label: 
+      label: GET
+
+    operation: 
+      url-pattern: .
+      http-method: GET
+      database-operation: Fetch Rows
+
+    remote-cache: 
+      caching: For All Users
+      cache-timeout: 3600
+
+    advanced: 
+      allow-fetching-all-rows: false
+      force-raise-http-404-error: false
+

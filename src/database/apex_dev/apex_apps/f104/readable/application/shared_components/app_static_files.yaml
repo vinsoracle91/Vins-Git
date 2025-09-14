@@ -1,0 +1,91 @@
+---
+- # ====== Static Application File: icons/app-icon-32.png ======
+  id: 5909829767695278600
+  identification: 
+    file-name: icons/app-icon-32.png
+
+  attributes: 
+    mime-type: image/png
+    file-character-set: Unicode UTF-8
+
+- # ====== Static Application File: icons/app-icon-192.png =====
+  id: 5909830049936278618
+  identification: 
+    file-name: icons/app-icon-192.png
+
+  attributes: 
+    mime-type: image/png
+    file-character-set: Unicode UTF-8
+
+- # ====== Static Application File: icons/app-icon-512.png =====
+  id: 5909830161817278635
+  identification: 
+    file-name: icons/app-icon-512.png
+
+  attributes: 
+    mime-type: image/png
+    file-character-set: Unicode UTF-8
+
+- # ====== Static Application File: app-icon.svg ===============
+  id: 6149444448780396932
+  identification: 
+    file-name: app-icon.svg
+
+  attributes: 
+    mime-type: image/svg+xml
+    file-character-set: Unicode UTF-8
+
+- # ====== Static Application File: app-sample-cards.ico =======
+  id: 6157578221552310240
+  identification: 
+    file-name: app-sample-cards.ico
+
+  attributes: 
+    mime-type: image/x-icon
+    file-character-set: Unicode UTF-8
+
+- # ====== Static Application File: app-sample-cards-16x16.png =
+  id: 6157578513836310865
+  identification: 
+    file-name: app-sample-cards-16x16.png
+
+  attributes: 
+    mime-type: image/png
+    file-character-set: Unicode UTF-8
+
+- # ====== Static Application File: app-sample-cards-32x32.png =
+  id: 6157578844989311534
+  identification: 
+    file-name: app-sample-cards-32x32.png
+
+  attributes: 
+    mime-type: image/png
+    file-character-set: Unicode UTF-8
+
+- # ====== Static Application File: app-sample-cards.png =======
+  id: 6157579055743312130
+  identification: 
+    file-name: app-sample-cards.png
+
+  attributes: 
+    mime-type: image/png
+    file-character-set: Unicode UTF-8
+
+- # ====== Static Application File: apex-mountain-range_light.pn
+  id: 6202837226213294097
+  identification: 
+    file-name: apex-mountain-range_light.png
+
+  attributes: 
+    mime-type: image/png
+    file-character-set: Unicode UTF-8
+
+- # ====== Static Application File: app-icon.css ===============
+  id: 9817502238469473296
+  identification: 
+    file-name: app-icon.css
+
+  attributes: 
+    mime-type: text/css
+    file-character-set: Unicode UTF-8
+

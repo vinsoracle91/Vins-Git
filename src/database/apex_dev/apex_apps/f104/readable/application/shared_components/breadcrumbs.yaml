@@ -1,0 +1,349 @@
+---
+- # ====== Breadcrumb: Breadcrumb ==============================
+  id: 11344150420152837823
+  identification: 
+    name: Breadcrumb
+
+  entries: 
+  - # ====== Entry: Advanced =====================================
+    id: 6171325836594326564
+    identification: 
+      name: Advanced
+      page-number: 19
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:19:&APP_SESSION.::&DEBUG.:::'
+        page: 19 # Advanced
+
+  - # ====== Entry: Basics =======================================
+    id: 6171336226944425002
+    identification: 
+      name: Basics
+      page-number: 20
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:20:&APP_SESSION.::&DEBUG.:::'
+        page: 20 # Basics
+
+  - # ====== Entry: Images and Media =============================
+    id: 6171352033169234894
+    identification: 
+      name: Images and Media
+      page-number: 21
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:21:&APP_SESSION.::&DEBUG.:::'
+        page: 21 # Images and Media
+
+  - # ====== Entry: Card Actions =================================
+    id: 6171358542927330505
+    identification: 
+      name: Card Actions
+      page-number: 22
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:22:&APP_SESSION.::&DEBUG.:::'
+        page: 22 # Card Actions
+
+  - # ====== Entry: Color Coded Cards ============================
+    id: 6171362350452362414
+    identification: 
+      name: Color Coded Cards
+      page-number: 18
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Basics # 6171336226944425002
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:18:&SESSION.::&DEBUG.:::'
+        page: 18 # Color Coded Cards
+
+  - # ====== Entry: Faceted Search ===============================
+    id: 6171363020559370450
+    identification: 
+      name: Faceted Search
+      page-number: 12
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Basics # 6171336226944425002
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:12:&SESSION.::&DEBUG.:::'
+        page: 12 # Faceted Search with Cards
+
+  - # ====== Entry: Star Icons ===================================
+    id: 6171363813256377390
+    identification: 
+      name: Star Icons
+      page-number: 13
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Basics # 6171336226944425002
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:13:&SESSION.::&DEBUG.:::'
+        page: 13 # Star Icons
+
+  - # ====== Entry: Styles =======================================
+    id: 6171364526367384428
+    identification: 
+      name: Styles
+      page-number: 3
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Basics # 6171336226944425002
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:3:&SESSION.::&DEBUG.:::'
+        page: 3 # Basic Cards
+
+  - # ====== Entry: BLOB Column as URL ===========================
+    id: 6171367015994418103
+    identification: 
+      name: BLOB Column as URL
+      page-number: 5
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Images and Media # 6171352033169234894
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:5:&SESSION.::&DEBUG.:::'
+        page: 5 # BLOB Column as URL
+
+  - # ====== Entry: Image URL ====================================
+    id: 6171367937444424656
+    identification: 
+      name: Image URL
+      page-number: 4
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Images and Media # 6171352033169234894
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:4:&SESSION.::&DEBUG.:::'
+        page: 4 # Image URL
+
+  - # ====== Entry: Embedded Video ===============================
+    id: 6171369290451438486
+    identification: 
+      name: Embedded Video
+      page-number: 6
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Images and Media # 6171352033169234894
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:6:&SESSION.::&DEBUG.:::'
+        page: 6 # Embedded Video
+
+  - # ====== Entry: Background Image =============================
+    id: 6171371136490457942
+    identification: 
+      name: Background Image
+      page-number: 7
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Images and Media # 6171352033169234894
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:7:&SESSION.::&DEBUG.:::'
+        page: 7 # Background Image
+
+  - # ====== Entry: Application Static Files =====================
+    id: 6171372031311466106
+    identification: 
+      name: Application Static Files
+      page-number: 8
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Images and Media # 6171352033169234894
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:8:&SESSION.::&DEBUG.:::'
+        page: 8 # Application Static Files
+
+  - # ====== Entry: Conditional Actions ==========================
+    id: 6171420215093237533
+    identification: 
+      name: Conditional Actions
+      page-number: 16
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Card Actions # 6171358542927330505
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:16:&SESSION.::&DEBUG.:::'
+        page: 16 # Conditional Actions
+
+  - # ====== Entry: Full Card Action =============================
+    id: 6171421548689263712
+    identification: 
+      name: Full Card Action
+      page-number: 15
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Card Actions # 6171358542927330505
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:15:&SESSION.::&DEBUG.:::'
+        page: 15 # Full Card Action
+
+  - # ====== Entry: Charts =======================================
+    id: 6171426763603281336
+    identification: 
+      name: Charts
+      page-number: 11
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Advanced # 6171325836594326564
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:11:&SESSION.::&DEBUG.:::'
+        page: 11 # Gauge Meter Chart Cards
+
+  - # ====== Entry: No Data Found ================================
+    id: 6171428140478291491
+    identification: 
+      name: No Data Found
+      page-number: 17
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Advanced # 6171325836594326564
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:17:&SESSION.::&DEBUG.:::'
+        page: 17 # No Data Found Message
+
+  - # ====== Entry: Template Directives ==========================
+    id: 6171428764737297941
+    identification: 
+      name: Template Directives
+      page-number: 9
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Advanced # 6171325836594326564
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:9:&SESSION.::&DEBUG.:::'
+        page: 9 # Template Directives
+
+  - # ====== Entry: Video Images with Durations ==================
+    id: 6171804704940515527
+    identification: 
+      name: Video Images with Durations
+      page-number: 10
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Images and Media # 6171352033169234894
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:10:&SESSION.::&DEBUG.:::'
+        page: 10 # APEX Play List
+
+  - # ====== Entry: Home =========================================
+    id: 11344150604636837823
+    identification: 
+      name: Home
+      page-number: 1
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:1:&APP_SESSION.::&DEBUG.'
+        page: 1 # Home
+
+  - # ====== Entry: BLOB Column ==================================
+    id: 11344304259302838074
+    identification: 
+      name: BLOB Column
+      page-number: 2
+
+    execution: 
+      sequence: 10
+
+    appearance: 
+      parent-entry: Images and Media # 6171352033169234894
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:2:&SESSION.::&DEBUG.:::'
+        page: 2 # BLOB column
+
